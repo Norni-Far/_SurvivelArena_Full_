@@ -56,14 +56,11 @@ public class S_HeroSee : MonoBehaviour
     {
         while (true)
         {
-
             yield return new WaitUntil(() => canShot);
 
             S_shot.Shot(0, Target.transform);
 
-
             yield return new WaitForSeconds(timeForReloadOfShot);
-
         }
 
 
