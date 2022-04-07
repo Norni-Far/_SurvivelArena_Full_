@@ -9,7 +9,7 @@ public class Game_Manager : MonoBehaviour
 
     [SerializeField] private GameObject[] ChosenCharacter;
 
-    private void Awake()
+    private void Awake() //пробуждение
     {
         MainCamera.SetPlayer(ChosenCharacter[1].transform);
         SpawnEnemy.SetPlayer(ChosenCharacter[1]);
