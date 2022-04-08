@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1126368404118400812}
   - component: {fileID: 8645070659186767701}
   - component: {fileID: 335906938394060877}
+  - component: {fileID: 3533799523170838816}
   m_Layer: 0
   m_Name: Enemy_Circle
   m_TagString: Finish
@@ -98,7 +99,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -155,3 +156,16 @@ MonoBehaviour:
   PrefabsEffectDamage: {fileID: 2827358817270521779, guid: 62393d597c4958347aca6fa6f6b3be35, type: 3}
   Damage: 10
   ReloadAttack: 5
+--- !u!114 &3533799523170838816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126368404118400808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475c1130e5feb31439027b7ef0e9033d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp_enemy: 3
