@@ -8,21 +8,20 @@ public class Hp_enemy : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
+
     public void hit(int damage)
     {
         hp_enemy -= damage;
-        print(damage);
+
         if (hp_enemy <= 0)
-        {
             Destroy(gameObject);
-        }
     }
 
 
