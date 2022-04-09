@@ -8,10 +8,11 @@ public class S_Lvl_Slider : MonoBehaviour
     private int exp;
     public int lvl;
     private int max_exp;
-    public Slider exp_slider;
+    private Slider exp_slider;
 
     private void Start()
     {
+        exp_slider = GetComponent<Slider>();
         exp_slider.value = exp;
         exp_slider.maxValue = max_exp;
     }
