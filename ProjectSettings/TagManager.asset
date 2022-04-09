@@ -7,6 +7,7 @@ TagManager:
   - Player_zoneDamage
   - Undefined
   - enemy
+  - lut
   layers:
   - Default
   - TransparentFX

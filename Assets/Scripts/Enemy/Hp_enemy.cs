@@ -21,7 +21,11 @@ public class Hp_enemy : MonoBehaviour
         hp_enemy -= damage;
 
         if (hp_enemy <= 0)
+        {
+            transform.GetComponent<S_Lut_after_dead>().Lut();
             Destroy(gameObject);
+
+        }
     }
 
 
