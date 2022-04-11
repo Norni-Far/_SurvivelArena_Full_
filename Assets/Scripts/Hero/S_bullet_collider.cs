@@ -6,9 +6,9 @@ public class S_bullet_collider : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D enemy)
     {
-        if (enemy.gameObject.TryGetComponent(out Hp_enemy hinge))
+        if (enemy.gameObject.TryGetComponent(out Hp_enemy hp_enemy))
         {
-            enemy.gameObject.GetComponent<Hp_enemy>().hit(2); //damage (нужен отдельный скрипт)
+            hp_enemy.hit(2); //damage (нужен отдельный скрипт)
             Destroy(gameObject);
         }
     }

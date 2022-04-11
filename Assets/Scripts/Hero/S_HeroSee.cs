@@ -71,20 +71,20 @@ public class S_HeroSee : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Finish")
+        if (collision.gameObject.TryGetComponent<S_moveEnemy>(out S_moveEnemy s_moveEnemy))
         {
             ISeeIts.Add(collision.gameObject);
-            collision.GetComponent<S_moveEnemy>().event_DeadEnemy += RemoveEnemyFromList;
+            s_moveEnemy.event_DeadEnemy += RemoveEnemyFromList;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Finish")
+        if (collision.gameObject.TryGetComponent<S_moveEnemy>(out S_moveEnemy s_moveEnemy))
         {
             collision.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             ISeeIts.Remove(collision.gameObject);
-            collision.GetComponent<S_moveEnemy>().event_DeadEnemy -= RemoveEnemyFromList;
+            s_moveEnemy.event_DeadEnemy -= RemoveEnemyFromList;
         }
     }
 
