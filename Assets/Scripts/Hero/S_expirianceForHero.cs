@@ -13,6 +13,7 @@ public class S_expirianceForHero : MonoBehaviour
         if (collision.gameObject.TryGetComponent<S_Lut_exp>(out S_Lut_exp S_lut))
         {
             event_SendExpiriance?.Invoke(S_lut.exp);
+            Destroy(collision.gameObject);
         }
     }
 

@@ -8,6 +8,6 @@ public class S_SendDamageForHero : MonoBehaviour
 
     public void SendDamageForHero()
     {
-        transform.parent.parent.GetComponent<S_Herohealth>().SetDamage(Damage);
+        transform.parent.parent.GetComponent<S_HeroHealth>().SetDamage(Damage);
     }
 }

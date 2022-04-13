@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class S_Herohealth : MonoBehaviour
+public class S_HeroHealth : MonoBehaviour
 {
+    public delegate void delegats();
+    public event delegats event_deadHero;
+
     [SerializeField] private RectTransform hp_jbject;
 
     [SerializeField] private int Health;
@@ -40,5 +39,8 @@ public class S_Herohealth : MonoBehaviour
     public void SetDamage(int Damage)
     {
         Health -= Damage;
+        if (Health <= 0)
+            event_deadHero?.Invoke();
+
     }
 }
