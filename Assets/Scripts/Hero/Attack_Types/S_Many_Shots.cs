@@ -17,7 +17,7 @@ public class S_Many_Shots : MonoBehaviour
                 Vector3 difference = Target.position - rock.transform.position;
                 float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
-                Quaternion rotation = Quaternion.AngleAxis(rotZ + -60, Vector3.forward);
+                Quaternion rotation = Quaternion.AngleAxis(rotZ -60, Vector3.forward);
                 inst.transform.rotation = Quaternion.Slerp(rock.transform.rotation, rotation, Time.deltaTime * 1000);
           
         }
@@ -30,7 +30,7 @@ public class S_Many_Shots : MonoBehaviour
             Vector3 difference = Target.position - rock.transform.position;
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
-            Quaternion rotation = Quaternion.AngleAxis(rotZ + -120, Vector3.forward);
+            Quaternion rotation = Quaternion.AngleAxis(rotZ -120, Vector3.forward);
             inst1.transform.rotation = Quaternion.Slerp(rock.transform.rotation, rotation, Time.deltaTime * 1000);
 
         }
