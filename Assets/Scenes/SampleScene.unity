@@ -90418,6 +90418,7 @@ GameObject:
   - component: {fileID: 1729067710}
   - component: {fileID: 1729067715}
   - component: {fileID: 1729067716}
+  - component: {fileID: 1729067717}
   m_Layer: 0
   m_Name: Hero_0_
   m_TagString: Untagged
@@ -90551,6 +90552,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  skill_active: 0000000000000000000000000000000000000000
 --- !u!114 &1729067716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90563,8 +90565,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd72decba4acb941a28c82ae1fdebfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill_active: 0000000000000000000000000000000000000000
   S_Shot: {fileID: 1729067715}
+--- !u!114 &1729067717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729067708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253f00637f2afca418eaae4e02ec1523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rock: {fileID: 1892908031}
+  bulletPrefab:
+  - {fileID: 5573682387036392462, guid: b3b5dc0fcfa255d4d803feb4d47b9db6, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1730977624
 GameObject:
   m_ObjectHideFlags: 0

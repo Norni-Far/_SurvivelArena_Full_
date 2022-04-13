@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class S_Skill_Manager : MonoBehaviour
 {
-    public bool [] skill_active = new bool [20];
     [SerializeField] private S_Shot S_Shot;
 
 
@@ -12,8 +11,12 @@ public class S_Skill_Manager : MonoBehaviour
     {
         switch (number)
         {
+            case 0:
+                S_Shot.skill_active[0] = true;
+                S_Shot.amount_shots++; //несколько выстрелов подряд
+                break;
             case 1:
-                S_Shot.amount_shots++;
+                S_Shot.skill_active[1] = true;
                 break;
         }
     }
