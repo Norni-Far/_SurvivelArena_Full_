@@ -19,23 +19,18 @@ public class S_Shot : MonoBehaviour
         inst.GetComponent<S_bulletMoveTowardsTarget>().target = Target;
 
         //ниже идут улучшения для выстрелов
-        DoubleShot(numberOfBullet, Target);
+        StartCoroutine(WaitAndPrint(0.3f, numberOfBullet, Target));
     }
     
 
-    private void DoubleShot(int numberOfBullet, Transform Target)
+    private IEnumerator WaitAndPrint(float waitTime, int numberOfBullet, Transform Target) // продолжение doubleShot с паузой
     {
         for (int i = 2; i <= amount_shots; i++)
         {
-            StartCoroutine(WaitAndPrint(0.3f, numberOfBullet, Target));
+            yield return new WaitForSeconds(waitTime);
+            GameObject inst = Instantiate(bulletPrefab[numberOfBullet], gameObject.transform.position, gameObject.transform.rotation);
+            inst.transform.position = rock.position;
+            inst.GetComponent<S_bulletMoveTowardsTarget>().target = Target;
         }
-        
-    }
-    private IEnumerator WaitAndPrint(float waitTime, int numberOfBullet, Transform Target) // продолжение doubleShot с паузой
-    {
-        yield return new WaitForSeconds(waitTime);
-        GameObject inst = Instantiate(bulletPrefab[numberOfBullet], gameObject.transform.position, gameObject.transform.rotation);
-        inst.transform.position = rock.position;
-        inst.GetComponent<S_bulletMoveTowardsTarget>().target = Target;
     }
 }
