@@ -10,7 +10,8 @@ public class S_bulletMoveTowardsTarget : MonoBehaviour
     public float speed = 0.1f;
 
 
-    private void Start() // задает направление полета пули
+
+    void FixedUpdate()
     {
         if (target != null)
         {
@@ -20,11 +21,7 @@ public class S_bulletMoveTowardsTarget : MonoBehaviour
             Quaternion rotation = Quaternion.AngleAxis(rotZ + -90, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * _speedRotate);
         }
-    }
-    void FixedUpdate()
-    {
-       
-            transform.position += transform.up * speed;
+        transform.position += transform.up * speed;
 
 
     }
