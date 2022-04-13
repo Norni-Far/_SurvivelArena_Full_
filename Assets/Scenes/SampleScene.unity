@@ -90552,7 +90552,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  skill_active: 0000000000000000000000000000000000000000
+  skill_active: 0101000000000000000000000000000000000000
 --- !u!114 &1729067716
 MonoBehaviour:
   m_ObjectHideFlags: 0
