@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class UI_Manager : MonoBehaviour
 {
+    [SerializeField] private S_Lvl_Slider S_Lvl_Slider;
 
-
-
-    void Start()
+   
+    public void GiveExporoenceFromGero(int exp)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        S_Lvl_Slider.Give_Exp(exp);
     }
 }

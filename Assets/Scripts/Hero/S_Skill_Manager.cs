@@ -6,7 +6,6 @@ public class S_Skill_Manager : MonoBehaviour
 {
     [SerializeField] private S_Shot S_Shot;
 
-
     public void ExploreSkill( int number)   
     {
         switch (number)

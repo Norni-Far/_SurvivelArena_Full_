@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class S_Lvl_Slider : MonoBehaviour
 {
-    private int exp;
+    [SerializeField] private int exp;
     public int lvl;
-    private int max_exp;
+    [SerializeField] private int max_exp;
     private Slider exp_slider;
 
     private void Start()
@@ -29,11 +29,8 @@ public class S_Lvl_Slider : MonoBehaviour
             exp_slider.maxValue = max_exp;
             lvl++;
         }
-            
+
 
         exp_slider.value = exp;
-
-
-
     }
 }
