@@ -8,8 +8,8 @@ public class S_Many_Shots : MonoBehaviour
     public GameObject[] bulletPrefab = new GameObject[5];
     public void Shot(int numberOfBullet, Transform Target)//производит выстрел
     {
-        GameObject inst = Instantiate(bulletPrefab[numberOfBullet], gameObject.transform.position, gameObject.transform.rotation);
-        inst.transform.position = rock.position;
+        GameObject inst = Instantiate(bulletPrefab[numberOfBullet], rock.transform.position, gameObject.transform.rotation);
+
         
 
             if (Target != null)
@@ -21,8 +21,8 @@ public class S_Many_Shots : MonoBehaviour
                 inst.transform.rotation = Quaternion.Slerp(rock.transform.rotation, rotation, Time.deltaTime * 1000);
           
         }
-        GameObject inst1 = Instantiate(bulletPrefab[numberOfBullet], gameObject.transform.position, gameObject.transform.rotation);
-        inst1.transform.position = rock.position;
+        GameObject inst1 = Instantiate(bulletPrefab[numberOfBullet], rock.transform.position, gameObject.transform.rotation);
+
 
 
         if (Target != null)

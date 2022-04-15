@@ -15,8 +15,7 @@ public class S_Shot : MonoBehaviour
 
     public void Shot(int numberOfBullet, Transform Target)//производит выстрел
     {
-        GameObject inst = Instantiate(bulletPrefab[numberOfBullet], gameObject.transform.position, gameObject.transform.rotation);
-        inst.transform.position = rock.position;
+        GameObject inst = Instantiate(bulletPrefab[numberOfBullet], rock.transform.position, gameObject.transform.rotation);
         RotationInst(inst,Target);
         
 
@@ -33,8 +32,7 @@ public class S_Shot : MonoBehaviour
         for (int i = 2; i <= amount_shots; i++)
         {
             yield return new WaitForSeconds(waitTime);
-            GameObject inst = Instantiate(bulletPrefab[numberOfBullet], gameObject.transform.position, gameObject.transform.rotation);
-            inst.transform.position = rock.position;
+            GameObject inst = Instantiate(bulletPrefab[numberOfBullet], rock.transform.position, gameObject.transform.rotation);
             RotationInst(inst,Target);
         }
     }
