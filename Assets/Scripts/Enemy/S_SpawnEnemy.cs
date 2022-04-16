@@ -20,8 +20,9 @@ public class S_SpawnEnemy : MonoBehaviour
     public void SetPlayer(GameObject Player) => hero = Player;
 
 
-    void Start()
+    public void StartSpawnerEnemy(GameObject Player)
     {
+        hero = Player;
         StartCoroutine(Startspawn());
     }
 

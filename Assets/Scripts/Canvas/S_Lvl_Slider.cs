@@ -14,8 +14,7 @@ public class S_Lvl_Slider : MonoBehaviour
     private Slider exp_slider;
 
     private void Start()
-    {
-        
+    {        
         exp_slider = GetComponent<Slider>();
         exp_slider.value = exp;
         exp_slider.maxValue = max_exp;
@@ -32,10 +31,8 @@ public class S_Lvl_Slider : MonoBehaviour
             max_exp *= 2;
             exp_slider.maxValue = max_exp;
             lvl++;
-            event_lvlup?.Invoke();
-            
+            event_lvlup?.Invoke();            
         }
-
 
         exp_slider.value = exp;
     }

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class S_expirianceForHero : MonoBehaviour
 {
+    [SerializeField] private Collider2D expirienceCollider;
+
     public delegate void Delegats(int exp);
     public event Delegats event_SendExpiriance;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        if (collision.gameObject.TryGetComponent<S_Lut_exp>(out S_Lut_exp S_lut))
+        if (collision.gameObject.TryGetComponent(out S_Lut_exp S_lut))
         {
             event_SendExpiriance?.Invoke(S_lut.exp);
             Destroy(collision.gameObject);
