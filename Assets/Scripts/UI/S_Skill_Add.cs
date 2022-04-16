@@ -20,7 +20,7 @@ public class S_Skill_Add : MonoBehaviour
         {
             int number = Random.Range(0, 2);
             GameObject panel1 = Instantiate(skill_prefab[number], plase_for_skills[i].transform.position, transform.rotation);
-            panel1.transform.parent = plase_for_skills[i].transform;
+            panel1.transform.SetParent(plase_for_skills[i].transform);
             switch (number)
             {
                 case 0:
