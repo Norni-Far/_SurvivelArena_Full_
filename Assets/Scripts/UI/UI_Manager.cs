@@ -21,4 +21,5 @@ public class UI_Manager : MonoBehaviour
         LvlUpPanel.SetActive(true);
         Time.timeScale = 0;
     }
+
 }

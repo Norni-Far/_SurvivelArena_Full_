@@ -336,6 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9db76df1770d3640b2879f91957d10c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s_By_Skill: {fileID: 0}
+  s_Skill_Manager: {fileID: 0}
   UI_Manager: {fileID: 261899432}
   MainCamera: {fileID: 519420030}
   SpawnEnemy: {fileID: 1374472689}
@@ -10731,7 +10733,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 261899430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 085bf7acf3d12b14eab7b36d9ad0c089, type: 3}
+  m_Script: {fileID: 11500000, guid: 879173b070854e24da14a228b9413425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   S_Lvl_Slider: {fileID: 978459437}
