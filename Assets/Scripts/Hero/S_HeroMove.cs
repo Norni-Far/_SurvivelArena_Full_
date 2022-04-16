@@ -3,13 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [RequireComponent(typeof(Rigidbody2D))]
 public class S_HeroMove : MonoBehaviour
 {
     [SerializeField] private Animator HeroAnimator;
     [SerializeField] private GameObject ImageGameObject;
-    [SerializeField] private RectTransform HanglePoint;
+    public RectTransform HanglePoint;
     [SerializeField] private Rigidbody2D rb;
 
     [SerializeField] private float VelocityOfHero;
