@@ -18,8 +18,12 @@ public class UI_Manager : MonoBehaviour
 
     public void LvlUpPanelActeve()
     {
-        LvlUpPanel.SetActive(true);
-        Time.timeScale = 0;
+        LvlUpPanel.SetActive(!LvlUpPanel.activeSelf);
+
+        if (Time.timeScale == 0)
+            Time.timeScale = 1;
+        else
+            Time.timeScale = 0;
     }
 
 }
