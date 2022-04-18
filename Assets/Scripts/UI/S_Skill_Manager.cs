@@ -18,7 +18,7 @@ public class S_Skill_Manager : MonoBehaviour
                 ExploreSkill_1();
                 break;
             case 1:
-                S_Shot.skill_active[1] = true;
+                ExploreSkill_2();
                 break;
         }
     }
@@ -33,7 +33,21 @@ public class S_Skill_Manager : MonoBehaviour
                 S_Shot.amount_shots++; //несколько выстрелов подряд
                 break;
             case 2:
-        //       S_Shot.skill_active[1] = true;
+                S_Shot.amount_shots++;
+                S_Shot.damage += 5;
+                break;
+        }
+    }
+
+    private void ExploreSkill_2()
+    {
+        switch (skill_lvl[0])
+        {
+            case 1:
+                S_Shot.skill_active[1] = true;
+                break;
+            case 2:
+                S_Shot.damage += 5;
                 break;
         }
     }

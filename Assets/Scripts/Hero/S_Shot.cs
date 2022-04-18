@@ -10,11 +10,13 @@ public class S_Shot : MonoBehaviour
     [SerializeField] private Transform rock;
     public GameObject[] bulletPrefab = new GameObject[5];
     public bool[] skill_active = new bool[20];
+    public int damage = 10;
 
 
     public void Shot(int numberOfBullet, Transform Target)//производит выстрел
     {
         GameObject inst = Instantiate(bulletPrefab[numberOfBullet], rock.transform.position, gameObject.transform.rotation);
+        inst.GetComponent<S_bullet_collider>().damage = damage;
         RotationInst(inst,Target);
         
 
@@ -32,6 +34,7 @@ public class S_Shot : MonoBehaviour
         {
             yield return new WaitForSeconds(waitTime);
             GameObject inst = Instantiate(bulletPrefab[numberOfBullet], rock.transform.position, gameObject.transform.rotation);
+            inst.GetComponent<S_bullet_collider>().damage = damage;
             RotationInst(inst,Target);
         }
     }
