@@ -41,7 +41,7 @@ public class S_Skill_Manager : MonoBehaviour
 
     private void ExploreSkill_2()
     {
-        switch (skill_lvl[0])
+        switch (skill_lvl[1])
         {
             case 1:
                 S_Shot.skill_active[1] = true;

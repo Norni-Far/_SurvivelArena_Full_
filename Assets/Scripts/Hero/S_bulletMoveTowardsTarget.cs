@@ -12,6 +12,6 @@ public class S_bulletMoveTowardsTarget : MonoBehaviour
     }
     void FixedUpdate()
     {
-        transform.position += transform.up * speed;
+        transform.position += transform.right * speed;
     }
 }
