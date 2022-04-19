@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2052205633905833403}
   - component: {fileID: 5573682387036392461}
   - component: {fileID: -4741989459601710163}
+  - component: {fileID: -4188121255929445582}
   m_Layer: 0
   m_Name: Bullet_Rock
   m_TagString: Untagged
@@ -161,3 +162,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+--- !u!114 &-4188121255929445582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573682387036392462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344f9e6425302b8459a51d8d556bb934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -7,6 +7,7 @@ public class S_Skill_Manager : MonoBehaviour
     [SerializeField] private S_Shot S_Shot;
     public int[] skill_lvl = new int[10];
     
+    
 
     public void ExploreSkill( int number)   
     {
@@ -36,6 +37,10 @@ public class S_Skill_Manager : MonoBehaviour
                 S_Shot.amount_shots++;
                 S_Shot.damage += 5;
                 break;
+            case 3:
+                S_Shot.amount_shots++;
+                S_Shot.pauseShot = S_Shot.pauseShot * 0.7f;
+                break;
         }
     }
 
@@ -45,9 +50,16 @@ public class S_Skill_Manager : MonoBehaviour
         {
             case 1:
                 S_Shot.skill_active[1] = true;
+                transform.GetComponent<S_Many_Shots>().lvl_many_shots ++;
                 break;
             case 2:
-                S_Shot.damage += 5;
+                transform.GetComponent<S_Many_Shots>().damage += 5;
+                break;
+            case 3:
+                transform.GetComponent<S_Many_Shots>().damage += 10;
+                break;
+            case 4:
+                transform.GetComponent<S_Many_Shots>().lvl_many_shots++;
                 break;
         }
     }

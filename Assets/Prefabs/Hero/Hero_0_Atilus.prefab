@@ -153,6 +153,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   skill_active: 0000000000000000000000000000000000000000
+  damage: 10
 --- !u!114 &1419960892420051358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +187,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  damage: 10
+  lvl_many_shots: 0
 --- !u!114 &3905497464034279921
 MonoBehaviour:
   m_ObjectHideFlags: 0
