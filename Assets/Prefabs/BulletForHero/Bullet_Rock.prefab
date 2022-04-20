@@ -11,15 +11,12 @@ GameObject:
   - component: {fileID: 5573682387036392499}
   - component: {fileID: 5573682387036392460}
   - component: {fileID: -5344480797383646392}
-<<<<<<< HEAD
-  - component: {fileID: -4741989459601710163}
-  - component: {fileID: 7903089995770117757}
-=======
+
   - component: {fileID: 2052205633905833403}
   - component: {fileID: 5573682387036392461}
   - component: {fileID: -4741989459601710163}
   - component: {fileID: -4188121255929445582}
->>>>>>> 032d68bfd81157fdb4b809e29ad5735238621516
+
   m_Layer: 0
   m_Name: Bullet_Rock
   m_TagString: Untagged
@@ -115,8 +112,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
-<<<<<<< HEAD
-=======
+
 --- !u!61 &2052205633905833403
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -156,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
->>>>>>> 032d68bfd81157fdb4b809e29ad5735238621516
+
 --- !u!114 &-4741989459601710163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,33 +165,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea551b4fd7a92904bbbea8c0d2cef8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  damage: 1
---- !u!58 &7903089995770117757
-CircleCollider2D:
-=======
+
   damage: 10
 --- !u!114 &-4188121255929445582
 MonoBehaviour:
->>>>>>> 032d68bfd81157fdb4b809e29ad5735238621516
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5573682387036392462}
   m_Enabled: 1
-<<<<<<< HEAD
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 8
-=======
+
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 344f9e6425302b8459a51d8d556bb934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
->>>>>>> 032d68bfd81157fdb4b809e29ad5735238621516
+
