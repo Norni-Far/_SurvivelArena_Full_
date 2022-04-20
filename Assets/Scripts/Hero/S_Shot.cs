@@ -6,10 +6,6 @@ using UnityEngine;
 public class S_Shot : MonoBehaviour
 {
     public int amount_shots;
-<<<<<<< HEAD
-    //private float _speedRotate = 100;
-=======
->>>>>>> 032d68bfd81157fdb4b809e29ad5735238621516
 
     [SerializeField] private Transform rock;
     public GameObject[] bulletPrefab = new GameObject[5];
