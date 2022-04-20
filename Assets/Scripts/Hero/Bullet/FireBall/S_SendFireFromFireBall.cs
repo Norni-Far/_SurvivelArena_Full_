@@ -5,9 +5,11 @@ using UnityEngine;
 public class S_SendFireFromFireBall : MonoBehaviour
 {
     [SerializeField] private GameObject prefabFire;
+    public int fireDamage;
 
     public void SendFireForEnemy(GameObject Enemy)
     {
-        Instantiate(prefabFire, Enemy.transform);
+         GameObject fire = Instantiate(prefabFire, Enemy.transform);
+        fire.GetComponent<S_FireForEnemy_SubtractHP>().fireDamage = fireDamage;
     }
 }

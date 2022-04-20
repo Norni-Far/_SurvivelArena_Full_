@@ -13,26 +13,30 @@ public class S_Shot : MonoBehaviour
     public int damage = 10;
     public float pauseShot = 0.3f;
     public int numberOfBullet = 0;
+    public int fireDamage = 1;
 
 
     public void Shot(Transform Target)//производит выстрел
     {
-        StartCoroutine(WaitAndPrint(pauseShot, numberOfBullet, Target));
+        StartCoroutine(WaitAndShot(pauseShot, numberOfBullet, Target));
     }
     
 
-    private IEnumerator WaitAndPrint(float waitTime, int numberOfBullet, Transform Target) // продолжение doubleShot с паузой
+    private IEnumerator WaitAndShot(float waitTime, int numberOfBullet, Transform Target) // продолжение doubleShot с паузой
     {
         for (int i = 1; i <= amount_shots; i++)
         {
             if (Target != null)
             {
-                yield return new WaitForSeconds(waitTime);
+               
                 GameObject inst = Instantiate(bulletPrefab[numberOfBullet], rock.transform.position, gameObject.transform.rotation);
                 inst.GetComponent<S_bullet_collider>().damage = damage;
                 RotationInst(inst, Target);
                 if (skill_active[1])
                     transform.GetComponent<S_Many_Shots>().Shot(Target);
+                if (inst.TryGetComponent(out S_FireForEnemy_SubtractHP fire))
+                    inst.GetComponent<S_FireForEnemy_SubtractHP>().fireDamage = fireDamage;
+                yield return new WaitForSeconds(waitTime);
             }
            
         }

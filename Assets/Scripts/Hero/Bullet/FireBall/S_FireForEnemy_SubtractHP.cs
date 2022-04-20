@@ -5,6 +5,7 @@ using UnityEngine;
 public class S_FireForEnemy_SubtractHP : MonoBehaviour
 {
     private GameObject Enemy;
+    public int fireDamage = 1;
 
     void Start()
     {
@@ -20,7 +21,7 @@ public class S_FireForEnemy_SubtractHP : MonoBehaviour
 
             if (Enemy.TryGetComponent(out S_Hp_enemy s_Hp_Enemy))
             {
-                s_Hp_Enemy.hit(1);
+                s_Hp_Enemy.hit(fireDamage);
             }
 
         }

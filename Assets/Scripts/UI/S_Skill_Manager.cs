@@ -68,19 +68,16 @@ public class S_Skill_Manager : MonoBehaviour
     }
     private void ExploreSkill_3()
     {
-        switch (skill_lvl[1])
+        switch (skill_lvl[2])
         {
             case 1:
                 S_Shot.numberOfBullet = 1;
                 break;
             case 2:
-                transform.GetComponent<S_Many_Shots>().damage += 5;
+                transform.GetComponent<S_Shot>().fireDamage += 3;
                 break;
             case 3:
-                transform.GetComponent<S_Many_Shots>().damage += 10;
-                break;
-            case 4:
-                transform.GetComponent<S_Many_Shots>().lvl_many_shots++;
+                transform.GetComponent<S_Many_Shots>().bulletPrefab = transform.GetComponent<S_Shot>().bulletPrefab[1];
                 break;
         }
     }

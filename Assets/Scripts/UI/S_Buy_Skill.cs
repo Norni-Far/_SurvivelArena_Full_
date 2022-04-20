@@ -20,4 +20,22 @@ public class S_Buy_Skill : MonoBehaviour
         transform.GetComponent<UI_Manager>().LvlUpPanelActeve();
 
     }
+    public void BuySkill_3()
+    {
+        event_skillForHero?.Invoke(2);
+        transform.GetComponent<UI_Manager>().LvlUpPanelActeve();
+
+    }
+    public void BuySkill_4()
+    {
+        event_skillForHero?.Invoke(3);
+        transform.GetComponent<UI_Manager>().LvlUpPanelActeve();
+
+    }
+    public void BuySkill_5()
+    {
+        event_skillForHero?.Invoke(4);
+        transform.GetComponent<UI_Manager>().LvlUpPanelActeve();
+
+    }
 }
