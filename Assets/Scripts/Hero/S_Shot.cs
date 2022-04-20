@@ -36,6 +36,7 @@ public class S_Shot : MonoBehaviour
            
         }
     }
+
     private void RotationInst(GameObject inst,Transform Target) // задает угол, для полета пули
     {
         if (Target != null)
