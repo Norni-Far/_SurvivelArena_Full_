@@ -129,6 +129,7 @@ MonoBehaviour:
   S_shot: {fileID: 1419960892420051353}
   CircleRadiusSee: {fileID: 1419960893207618007}
   ISeeIts: []
+  chooseBulletPrefaab: 1
   Target: {fileID: 0}
   canShot: 0
   timeForReloadOfShot: 1
@@ -154,6 +155,7 @@ MonoBehaviour:
   - {fileID: 0}
   skill_active: 0000000000000000000000000000000000000000
   damage: 10
+  pauseShot: 0.3
 --- !u!114 &1419960892420051358
 MonoBehaviour:
   m_ObjectHideFlags: 0

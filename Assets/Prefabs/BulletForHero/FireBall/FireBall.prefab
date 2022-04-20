@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3233904093860223432}
   - component: {fileID: 2136878458091803686}
   - component: {fileID: 6286219329435470502}
+  - component: {fileID: 2338191700679873603}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -153,6 +154,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+--- !u!114 &2338191700679873603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3233904093860223433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04a312056b20294f8ebe6ce85f14043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabFire: {fileID: 1176317883746064596, guid: 670296a19dbdc9247ab1b1cc0d32e739, type: 3}
 --- !u!1 &3233904093879867136
 GameObject:
   m_ObjectHideFlags: 0
