@@ -154,6 +154,7 @@ MonoBehaviour:
   - {fileID: 0}
   skill_active: 0000000000000000000000000000000000000000
   damage: 10
+  pauseShot: 0.3
 --- !u!114 &1419960892420051358
 MonoBehaviour:
   m_ObjectHideFlags: 0

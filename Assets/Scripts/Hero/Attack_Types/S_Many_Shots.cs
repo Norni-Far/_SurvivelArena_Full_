@@ -6,18 +6,19 @@ public class S_Many_Shots : MonoBehaviour
     public GameObject[] bulletPrefab = new GameObject[5];
     public int damage = 10;
     public int lvl_many_shots;
-    public void Shot(int numberOfBullet, Transform Target)//производит выстрел
+    public int numberOfBullet;
+    public void Shot(Transform Target)//производит выстрел
     {
         if (Target != null)
         {
             switch (lvl_many_shots)
             {
                 case 1:
-                    plus2(numberOfBullet, Target, 10);
+                    plus2(Target, 10);
                     break;
                 case 2:
-                    plus2(numberOfBullet, Target, 10);
-                    plus2(numberOfBullet, Target, 20);
+                    plus2(Target, 10);
+                    plus2(Target, 20);
                     break;
 
             }
@@ -25,7 +26,7 @@ public class S_Many_Shots : MonoBehaviour
 
 
     }
-    private void plus2(int numberOfBullet, Transform Target, int rec)
+    private void plus2(Transform Target, int rec)
     {
 
         if (Target != null)

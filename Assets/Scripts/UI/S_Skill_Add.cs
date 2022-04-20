@@ -35,7 +35,7 @@ public class S_Skill_Add : MonoBehaviour
                     skill2(skill_Obj[number]);
                     break;
                 case 2:
-                    skill2(skill_Obj[number]);
+                    skill3(skill_Obj[number]);
                     break;
                 case 3:
                     skill2(skill_Obj[number]);
@@ -75,6 +75,24 @@ public class S_Skill_Add : MonoBehaviour
                 break;
             case 4:
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Дает еще два дополнительных снаряда.";
+                break;
+        }
+    }
+    private void skill3(GameObject panel)
+    {
+        switch (skill_lvl[1])
+        {
+            case 0:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Добовляет к основному заряду огненный эффект.";
+                break;
+            case 1:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон от поджога на 3";
+                break;
+            case 3:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Добавляет огненный поджег дополнительным снарядам.";
+                break;
+            case 4:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Подожженые враги наносят урон ближайшим врагам.";
                 break;
         }
     }

@@ -12,9 +12,10 @@ public class S_Shot : MonoBehaviour
     public bool[] skill_active = new bool[20];
     public int damage = 10;
     public float pauseShot = 0.3f;
+    public int numberOfBullet = 0;
 
 
-    public void Shot(int numberOfBullet, Transform Target)//производит выстрел
+    public void Shot(Transform Target)//производит выстрел
     {
         StartCoroutine(WaitAndPrint(pauseShot, numberOfBullet, Target));
     }
@@ -31,7 +32,7 @@ public class S_Shot : MonoBehaviour
                 inst.GetComponent<S_bullet_collider>().damage = damage;
                 RotationInst(inst, Target);
                 if (skill_active[1])
-                    transform.GetComponent<S_Many_Shots>().Shot(0, Target);
+                    transform.GetComponent<S_Many_Shots>().Shot(Target);
             }
            
         }
