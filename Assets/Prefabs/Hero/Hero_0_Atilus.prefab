@@ -129,6 +129,7 @@ MonoBehaviour:
   S_shot: {fileID: 1419960892420051353}
   CircleRadiusSee: {fileID: 1419960893207618007}
   ISeeIts: []
+  chooseBulletPrefaab: 1
   Target: {fileID: 0}
   canShot: 0
   timeForReloadOfShot: 1

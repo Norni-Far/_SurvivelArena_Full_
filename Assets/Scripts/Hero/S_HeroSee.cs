@@ -9,6 +9,7 @@ public class S_HeroSee : MonoBehaviour
     [SerializeField] private CircleCollider2D CircleRadiusSee;
     [SerializeField] private List<GameObject> ISeeIts = new List<GameObject>();
 
+    [SerializeField] private int chooseBulletPrefaab;
     public GameObject Target;
     public bool canShot;
     public float timeForReloadOfShot;
@@ -58,7 +59,12 @@ public class S_HeroSee : MonoBehaviour
         {
             yield return new WaitUntil(() => canShot);
             if (Target != null)
+<<<<<<< HEAD
             S_shot.Shot(Target.transform);
+=======
+
+            S_shot.Shot(chooseBulletPrefaab, Target.transform);
+>>>>>>> f4d933d2709a63188ca5f3f9022869fccbb8e927
 
             yield return new WaitForSeconds(timeForReloadOfShot);
         }
