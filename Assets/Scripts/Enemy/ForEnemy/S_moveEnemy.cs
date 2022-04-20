@@ -13,6 +13,9 @@ public class S_moveEnemy : MonoBehaviour
     [SerializeField] private float distans;
     [SerializeField] private float speed;
 
+    [Header("Доступная информация об объекте")]
+    //доступная информация о объекте 
+    public bool isMoving;
     void FixedUpdate()
     {
         if (hero != null)
@@ -20,7 +23,12 @@ public class S_moveEnemy : MonoBehaviour
 
         if (Vector2.Distance(posHero, transform.position) > distans)
         {
-            transform.position = Vector2.MoveTowards(transform.position, posHero, speed/100);
+            transform.position = Vector2.MoveTowards(transform.position, posHero, speed / 100);
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
         }
     }
 

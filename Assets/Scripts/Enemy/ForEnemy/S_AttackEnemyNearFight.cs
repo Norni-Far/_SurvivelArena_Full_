@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_AttackEnemy : MonoBehaviour
+public class S_AttackEnemyNearFight : MonoBehaviour
 {
     [SerializeField] private GameObject PrefabsEffectDamage;
     [SerializeField] private int Damage;
