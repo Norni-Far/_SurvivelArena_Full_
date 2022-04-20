@@ -78,7 +78,7 @@ public class S_Skill_Add : MonoBehaviour
                 break;
         }
     }
-<<<<<<< HEAD
+
     private void skill3(GameObject panel)
     {
         switch (skill_lvl[1])
@@ -97,7 +97,5 @@ public class S_Skill_Add : MonoBehaviour
                 break;
         }
     }
-=======
-    
->>>>>>> f4d933d2709a63188ca5f3f9022869fccbb8e927
+
 }

@@ -59,12 +59,9 @@ public class S_HeroSee : MonoBehaviour
         {
             yield return new WaitUntil(() => canShot);
             if (Target != null)
-<<<<<<< HEAD
-            S_shot.Shot(Target.transform);
-=======
 
-            S_shot.Shot(chooseBulletPrefaab, Target.transform);
->>>>>>> f4d933d2709a63188ca5f3f9022869fccbb8e927
+            S_shot.Shot(Target.transform);
+
 
             yield return new WaitForSeconds(timeForReloadOfShot);
         }
