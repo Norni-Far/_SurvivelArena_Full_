@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class S_bullet_collider : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D enemy)
+    [SerializeField] private int damage;
+
+    private void OnTriggerEnter2D(Collider2D enemy)
     {
         if (enemy.gameObject.TryGetComponent(out Hp_enemy hp_enemy))
         {
-            hp_enemy.hit(2); //damage (нужен отдельный скрипт)
+            hp_enemy.hit(damage); //damage (нужен отдельный скрипт)
             Destroy(gameObject);
         }
     }
