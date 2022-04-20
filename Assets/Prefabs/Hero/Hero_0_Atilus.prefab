@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4d6cacb79a4b244ba88baac744e6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount_shots: 3
+  amount_shots: 1
   rock: {fileID: 1419960892702380197}
   bulletPrefab:
   - {fileID: 5573682387036392462, guid: b3b5dc0fcfa255d4d803feb4d47b9db6, type: 3}
@@ -152,7 +152,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  skill_active: 0101000000000000000000000000000000000000
+  skill_active: 0000000000000000000000000000000000000000
+  damage: 10
 --- !u!114 &1419960892420051358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   S_Shot: {fileID: 1419960892420051353}
+  skill_lvl: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!114 &1419960892420051359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +187,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  damage: 10
+  lvl_many_shots: 0
 --- !u!114 &3905497464034279921
 MonoBehaviour:
   m_ObjectHideFlags: 0

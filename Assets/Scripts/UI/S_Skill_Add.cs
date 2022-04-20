@@ -5,33 +5,40 @@ using UnityEngine.UI;
 
 public class S_Skill_Add : MonoBehaviour
 {
-    [SerializeField] private GameObject[] plase_for_skills = new GameObject[3];
-    [SerializeField] private GameObject[] skill_prefab = new GameObject[10];
+    [SerializeField] GameObject content_skills;
+    [SerializeField] S_Buy_Skill s_Buy_Skill;
+    [SerializeField] private GameObject[] skill_Obj = new GameObject[10];
     [SerializeField] public int[] skill_lvl = new int[10]; //дл€ того, чтобы знать какой лвл прокачки у скила
 
     public void OnEnable()
     {
+        for (int i = 0; i < content_skills.transform.childCount; i++)
+        {
+            skill_Obj[i] = content_skills.transform.GetChild(i).gameObject;
+        }
         RandomSkill();
+
     }
 
     public void RandomSkill()
     {
         for (int i = 0; i < 3; i++)
         {
-            int number = Random.Range(0, 2);
-            GameObject panel1 = Instantiate(skill_prefab[number], plase_for_skills[i].transform.position, transform.rotation);
-            panel1.transform.SetParent(plase_for_skills[i].transform);
+            int number = Random.Range(0, 3);
+            skill_Obj[number].transform.SetAsFirstSibling();
             switch (number)
             {
                 case 0:
-                    
-                    skill1(panel1);
+                    skill1(skill_Obj[number]);
                     break;
                 case 1:
-                    skill2(panel1);
+                    skill2(skill_Obj[number]);
                     break;
                 case 2:
-                    skill1(panel1);
+                    skill2(skill_Obj[number]);
+                    break;
+                case 3:
+                    skill2(skill_Obj[number]);
                     break;
             }
         }
@@ -70,10 +77,5 @@ public class S_Skill_Add : MonoBehaviour
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "ƒает еще два дополнительных снар€да.";
                 break;
         }
-    }
-    private void OnDisable()
-    {
-        for (int i = 0; i < 3; i++)
-            Destroy(plase_for_skills[i].transform.GetChild(0).gameObject);
     }
 }

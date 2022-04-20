@@ -5,6 +5,7 @@ using UnityEngine;
 public class Game_Manager : MonoBehaviour
 {
     // Скрипты
+
     [SerializeField] private UI_Manager UI_Manager;
     [SerializeField] private S_MainCamera MainCamera;
     [SerializeField] private S_SpawnEnemy SpawnEnemy;
@@ -33,6 +34,8 @@ public class Game_Manager : MonoBehaviour
 
         //Старт спавна врагов
         SpawnEnemy.StartSpawnerEnemy(Character);
+
+
     }
 
     private void HeroIsCreate()
