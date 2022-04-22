@@ -13,29 +13,34 @@ public class S_Buy_Skill : MonoBehaviour
     {
         event_skillForHero?.Invoke(0);
         transform.GetComponent<UI_Manager>().LvlUpPanelActeve();
+        skills_panel.GetComponent<S_Skill_Add>().skill_lvl[0]++;
     }
     public void BuySkill_2()
     {
         event_skillForHero?.Invoke(1);
         transform.GetComponent<UI_Manager>().LvlUpPanelActeve();
+        skills_panel.GetComponent<S_Skill_Add>().skill_lvl[1]++;
 
     }
     public void BuySkill_3()
     {
         event_skillForHero?.Invoke(2);
         transform.GetComponent<UI_Manager>().LvlUpPanelActeve();
+        skills_panel.GetComponent<S_Skill_Add>().skill_lvl[2]++;
 
     }
     public void BuySkill_4()
     {
         event_skillForHero?.Invoke(3);
         transform.GetComponent<UI_Manager>().LvlUpPanelActeve();
+        skills_panel.GetComponent<S_Skill_Add>().skill_lvl[3]++;
 
     }
     public void BuySkill_5()
     {
         event_skillForHero?.Invoke(4);
         transform.GetComponent<UI_Manager>().LvlUpPanelActeve();
+        skills_panel.GetComponent<S_Skill_Add>().skill_lvl[4]++;
 
     }
 }
