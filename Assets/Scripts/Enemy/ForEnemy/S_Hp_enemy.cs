@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class S_Hp_enemy : MonoBehaviour
 {
+    [SerializeField] private GameObject prefabExplosEnemy;
+
     public int hp_enemy = 3;
 
     public void hit(int damage)
@@ -17,5 +19,10 @@ public class S_Hp_enemy : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        if (prefabExplosEnemy != null)
+            Instantiate(prefabExplosEnemy, transform.position, transform.rotation, null);
+    }
 
 }
