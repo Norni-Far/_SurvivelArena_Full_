@@ -33,11 +33,11 @@ public class S_lor : MonoBehaviour
         }
             
 
-        if (stage1 && heroesImage.transform.position.y > 1500)
+        if (stage1 && heroesImage.transform.position.y > Screen.height / 2)
         {
             heroesImage.transform.position = new Vector2(heroesImage.transform.position.x, heroesImage.transform.position.y - spead);
         }
-        if (stage1 && heroesImage.transform.position.y < 1500)
+        if (stage1 && heroesImage.transform.position.y < Screen.height / 2)
         {
             a += 0.01f;
             heroesImage1.transform.GetComponent<Image>().color = new Color (255, 255, 255, a);

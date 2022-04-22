@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2710358208662158817}
   - component: {fileID: 2710358208662158816}
   - component: {fileID: 4326520507494429717}
+  - component: {fileID: -4893538689913516272}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -126,7 +127,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.502072, y: 0.177}
+    oldSize: {x: 0.50166667, y: 0.177}
     newSize: {x: 15.0621605, y: 5.31}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -162,3 +163,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   S_moveArrow: {fileID: 2710358208662158816}
   damage: 0
+--- !u!114 &-4893538689913516272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2710358208662158819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344f9e6425302b8459a51d8d556bb934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeDead: 10
