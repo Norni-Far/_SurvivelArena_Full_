@@ -142,6 +142,7 @@ MonoBehaviour:
   hero: {fileID: 0}
   distans: 0
   speed: 1
+  isMoving: 0
 --- !u!114 &335906938394060877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,3 +184,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpObj: {fileID: 1126368404118400808, guid: 6d038c6f2e2c90d42b815c1bff15770f, type: 3}
+  percentOflut: 60

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class S_SpawnEnemy : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject[] enemyPrefabs_Monsters = new GameObject[5];
     [SerializeField] private float timeSpawn;
     [SerializeField] private int maxCountEnemy;
     [SerializeField] private List<GameObject> EnemyList = new List<GameObject>();
@@ -34,10 +34,14 @@ public class S_SpawnEnemy : MonoBehaviour
 
             if (EnemyList.Count < maxCountEnemy)
             {
+                // вборка объекта для спавна 
+
+
                 // создаем обэект и добовляем его в лист
-                GameObject monsterdObj = Instantiate(enemyPrefab);
+                GameObject monsterdObj = Instantiate(enemyPrefabs_Monsters[ChooseEnemyForSpawn()]);
                 monsterdObj.GetComponent<S_moveEnemy>().hero = hero;
                 EnemyList.Add(monsterdObj);
+
                 // подписка/слежение менеджера за удалением объекта 
                 monsterdObj.GetComponent<S_moveEnemy>().event_DeadEnemy += RemoveEnemyFromList;
 
@@ -69,4 +73,14 @@ public class S_SpawnEnemy : MonoBehaviour
     }
 
     private void RemoveEnemyFromList(GameObject Enemy) => EnemyList.Remove(Enemy);
+
+    private int ChooseEnemyForSpawn()
+    {
+        int rnd = Random.Range(0, 101);
+
+        if (rnd < 80)
+            return 0;
+        else
+            return 1;
+    }
 }

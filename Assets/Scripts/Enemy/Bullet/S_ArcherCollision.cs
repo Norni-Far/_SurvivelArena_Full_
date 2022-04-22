@@ -14,11 +14,12 @@ public class S_ArcherCollision : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             gameObject.transform.parent = S_heroBody.gameObject.transform;
-            // отнимание жизней
 
+            // отнимание жизней
+            S_heroBody.transform.parent.parent.GetComponent<S_HeroHealth>().SetDamage(damage);
             S_moveArrow.enabled = false;
 
-            //Destroy(gameObject);
+            Destroy(this);
         }
     }
 }

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 8870373116696762388}
   - component: {fileID: 8870373116696762391}
   - component: {fileID: 8870373116696762384}
+  - component: {fileID: 6553161903707216206}
+  - component: {fileID: 1868493048219443715}
   m_Layer: 0
   m_Name: Archer_Enemy
   m_TagString: Untagged
@@ -165,3 +167,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabArrow: {fileID: 2710358208662158819, guid: ee381eeda5960c743b6a046cad9ba3e0, type: 3}
   reloadForArcher: 1
+  damageForArrow: 10
+--- !u!114 &6553161903707216206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870373116696762390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475c1130e5feb31439027b7ef0e9033d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp_enemy: 1
+--- !u!114 &1868493048219443715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870373116696762390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846be04b0daa1a24587c33456981fd7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExpObj: {fileID: 1126368404118400808, guid: 6d038c6f2e2c90d42b815c1bff15770f, type: 3}
+  percentOflut: 70

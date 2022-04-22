@@ -10,6 +10,7 @@ public class S_FireForFarFight : MonoBehaviour
     private Transform heroBody;
 
     public float reloadForArcher;
+    public int damageForArrow;
     private void Start()
     {
         StartCoroutine(StartAimForArcher());
@@ -30,15 +31,14 @@ public class S_FireForFarFight : MonoBehaviour
 
     IEnumerator StartAimForArcher()
     {
-        print("1");
         yield return new WaitUntil(() => S_MoveEnemy != null);
-        print("2");
+
         while (true)
         {
             yield return new WaitUntil(() => !S_MoveEnemy.isMoving);
-            print("3");
 
             GameObject inst = Instantiate(prefabArrow, transform.position, transform.rotation);
+            inst.GetComponent<S_ArcherCollision>().damage = damageForArrow;
 
             Vector3 difference = heroBody.position - inst.transform.position;
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;

@@ -57632,8 +57632,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d0bcee9a093014f8083826d3761581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8870373116696762390, guid: 209ed46ab87415049b4cc9a8faf68c06, type: 3}
-  timeSpawn: 10
+  enemyPrefabs_Monsters:
+  - {fileID: 1126368404118400808, guid: 4c74da92285b9ab438eef9f3f497fe7e, type: 3}
+  - {fileID: 8870373116696762390, guid: 209ed46ab87415049b4cc9a8faf68c06, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  timeSpawn: 1
   maxCountEnemy: 200
   EnemyList: []
 --- !u!1 &1375373768
