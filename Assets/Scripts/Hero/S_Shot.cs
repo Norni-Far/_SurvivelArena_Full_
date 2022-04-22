@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 public class S_Shot : MonoBehaviour
-{
+{    
     public int amount_shots;
 
     [SerializeField] private Transform rock;

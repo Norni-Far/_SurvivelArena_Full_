@@ -15,14 +15,11 @@ public class S_Hp_enemy : MonoBehaviour
         if (hp_enemy <= 0)
         {
             transform.GetComponent<S_Lut_after_dead>().Lut();
+            if (prefabExplosEnemy != null)
+                Instantiate(prefabExplosEnemy, transform.position, transform.rotation, null);
+
             Destroy(gameObject);
         }
-    }
-
-    private void OnDestroy()
-    {
-        if (prefabExplosEnemy != null)
-            Instantiate(prefabExplosEnemy, transform.position, transform.rotation, null);
     }
 
 }

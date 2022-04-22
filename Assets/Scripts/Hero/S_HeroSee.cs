@@ -5,6 +5,7 @@ using UnityEngine;
 public class S_HeroSee : MonoBehaviour
 {
     [SerializeField] private S_Shot S_shot;
+    [SerializeField] private S_SpecialShot s_SpecialShot;
 
     [SerializeField] private CircleCollider2D CircleRadiusSee;
     [SerializeField] private List<GameObject> ISeeIts = new List<GameObject>();
@@ -60,8 +61,11 @@ public class S_HeroSee : MonoBehaviour
             yield return new WaitUntil(() => canShot);
             if (Target != null)
 
+            // обычная стрельба 
             S_shot.Shot(Target.transform);
 
+            // особая стрельба (работает отдельно) 
+            
 
             yield return new WaitForSeconds(timeForReloadOfShot);
         }

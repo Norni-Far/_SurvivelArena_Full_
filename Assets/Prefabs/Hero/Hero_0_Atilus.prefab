@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1419960892420051358}
   - component: {fileID: 1419960892420051359}
   - component: {fileID: 3905497464034279921}
+  - component: {fileID: 9068065561950138685}
   m_Layer: 0
   m_Name: Hero_0_Atilus
   m_TagString: Untagged
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   S_shot: {fileID: 1419960892420051353}
+  s_SpecialShot: {fileID: 0}
   CircleRadiusSee: {fileID: 1419960893207618007}
   ISeeIts: []
   chooseBulletPrefaab: 1
@@ -201,6 +203,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   S_ExpirianceForHero: {fileID: 1419960894113119416}
+--- !u!114 &9068065561950138685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419960892420051430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed2cc92768b48146873db133ef4c356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabMeteor: {fileID: 2756655045853204322, guid: 30cc0995ea2cd4a408583901cc9c9225, type: 3}
+  prefabPlaceOfmeteor: {fileID: 8678564591322682616, guid: 647d07f2b559c3144895a96d41bf4c9b, type: 3}
+  S_HeroSee: {fileID: 1419960892420051428}
+  reloadForspecialWeapons: 10
 --- !u!1 &1419960892551953581
 GameObject:
   m_ObjectHideFlags: 0
