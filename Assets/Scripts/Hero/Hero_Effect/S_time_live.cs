@@ -8,14 +8,6 @@ public class S_time_live : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(deadBall(timeDead));
-       
+        Destroy(gameObject, timeDead);
     }
-
-    private IEnumerator deadBall(float time)
-    {
-         yield return new WaitForSeconds(time);
-        Destroy(gameObject);
-    }
-
 }

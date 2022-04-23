@@ -16,7 +16,7 @@ public class S_ArcherCollision : MonoBehaviour
             gameObject.transform.parent = S_heroBody.gameObject.transform;
 
             // отнимание жизней
-            S_heroBody.transform.parent.parent.GetComponent<S_HeroHealth>().SetDamage(damage);
+            S_heroBody.transform.parent.parent.GetComponent<S_HeroHealth>().SetDamage(damage, gameObject);
             S_moveArrow.enabled = false;
 
             Destroy(this);

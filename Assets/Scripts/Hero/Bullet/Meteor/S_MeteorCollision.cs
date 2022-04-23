@@ -11,6 +11,9 @@ public class S_MeteorCollision : MonoBehaviour
     {
         if (collision.TryGetComponent(out S_placeOfMeteor S_placeOfMeteor))
         {
+
+            Instantiate(prefabExplose, transform.position, new Quaternion(0, 0, 0, 0), null);
+
             Destroy(S_placeOfMeteor.gameObject);
             Destroy(gameObject);
         }

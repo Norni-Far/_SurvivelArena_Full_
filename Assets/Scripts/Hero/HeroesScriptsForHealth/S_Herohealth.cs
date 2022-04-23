@@ -35,9 +35,24 @@ public class S_HeroHealth : MonoBehaviour
     }
     #endregion
 
-
-    public void SetDamage(int Damage)
+    /// <summary>
+    /// Получение урона героем
+    /// </summary>
+    /// <param name="Damage">Наносимый Урон</param>
+    /// <param name="Enemy">Кто наносит урон</param>
+    public void SetDamage(int Damage, GameObject Enemy) // принимает | урон | кто наносит урон |
     {
+        // шанс увернуться от получения урона 
+        if (Enemy.TryGetComponent(out S_SendDamageForHero_NearFight S_nearFight)) //ближники 
+        {
+
+        }
+
+        if(Enemy.TryGetComponent(out S_ArcherCollision S_arrow)) // дальники 
+        {
+            //return;
+        }
+
         Health -= Damage;
         if (Health <= 0)
             event_deadHero?.Invoke();

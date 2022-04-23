@@ -23,7 +23,7 @@ public class S_AttackEnemyNearFight : MonoBehaviour
 
             Vector3 Position = new Vector3(TuchObject.transform.position.x, TuchObject.transform.position.y + 0.5f, TuchObject.transform.position.z);
             GameObject Inst = Instantiate(PrefabsEffectDamage, TuchObject.transform);
-            Inst.GetComponent<S_SendDamageForHero>().Damage = Damage;
+            Inst.GetComponent<S_SendDamageForHero_NearFight>().Damage = Damage;
             Inst.transform.position = Position;
             Inst.transform.eulerAngles = new Vector3(0, 0, Random.Range(0, 360));
 
