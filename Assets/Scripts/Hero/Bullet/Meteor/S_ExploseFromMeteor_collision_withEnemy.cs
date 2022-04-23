@@ -5,6 +5,12 @@ using UnityEngine;
 public class S_ExploseFromMeteor_collision_withEnemy : MonoBehaviour
 {
     public int damage;
+    public float radiusDMG;
+
+    private void Start()
+    {
+        transform.localScale = new Vector3(radiusDMG, radiusDMG, radiusDMG);
+    }
 
     private void OnTriggerEnter2D(Collider2D enemy)
     {
