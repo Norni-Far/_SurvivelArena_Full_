@@ -21,7 +21,7 @@ public class S_Subscribes : MonoBehaviour
         // для подбирания опыта героем
         heroObject.GetComponent<S_InformationAboutHero>().S_ExpirianceForHero.event_SendExpiriance += UI_Manager.GiveExporoenceFromGero;
         // для показа хп на экране
-        heroObject.GetComponent<S_HeroHealth>().event_deadHero += UI_Manager.TextDead;
+        heroObject.GetComponent<S_Herohealth>().event_deadHero += UI_Manager.TextDead;
 
 
         // добавляет новую способность 

@@ -9,7 +9,7 @@ public class S_Skill_Manager : MonoBehaviour
     
     
 
-    public void ExploreSkill( int number)   
+    public void ExploreSkill(int number)   
     {
 
         skill_lvl[number]++;

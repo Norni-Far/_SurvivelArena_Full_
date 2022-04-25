@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class S_SendDamageForHero_NearFight : MonoBehaviour
@@ -8,6 +6,6 @@ public class S_SendDamageForHero_NearFight : MonoBehaviour
 
     public void SendDamageForHero()
     {
-        transform.parent.parent.GetComponent<S_HeroHealth>().SetDamage(Damage, gameObject);
+        transform.parent.parent.GetComponent<S_Herohealth>().SetDamage(Damage, gameObject);
     }
 }

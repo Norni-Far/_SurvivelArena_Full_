@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class S_HeroHealth : MonoBehaviour
+public class S_Herohealth : MonoBehaviour
 {
     public delegate void delegats();
     public event delegats event_deadHero;
