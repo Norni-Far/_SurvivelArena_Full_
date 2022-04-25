@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 1419960892420051352}
   - component: {fileID: 1419960892420051428}
   - component: {fileID: 1419960892420051353}
-  - component: {fileID: 1419960892420051358}
   - component: {fileID: 1419960892420051359}
   - component: {fileID: 3905497464034279921}
   - component: {fileID: 9068065561950138685}
+  - component: {fileID: 487519576174258472}
   m_Layer: 0
   m_Name: Hero_0_Atilus
   m_TagString: Untagged
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   S_shot: {fileID: 1419960892420051353}
-  s_SpecialShot: {fileID: 0}
+  s_SpecialShot: {fileID: 9068065561950138685}
   CircleRadiusSee: {fileID: 1419960893207618007}
   ISeeIts: []
   chooseBulletPrefaab: 1
@@ -160,20 +160,6 @@ MonoBehaviour:
   pauseShot: 0.3
   numberOfBullet: 0
   fireDamage: 1
---- !u!114 &1419960892420051358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419960892420051430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cd72decba4acb941a28c82ae1fdebfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  S_Shot: {fileID: 1419960892420051353}
-  skill_lvl: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!114 &1419960892420051359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +205,20 @@ MonoBehaviour:
   prefabPlaceOfmeteor: {fileID: 8678564591322682616, guid: 647d07f2b559c3144895a96d41bf4c9b, type: 3}
   S_HeroSee: {fileID: 1419960892420051428}
   reloadForspecialWeapons: 10
+--- !u!114 &487519576174258472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419960892420051430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5343a88fc0cc4740b87ef3e1b9c1347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  S_Shot: {fileID: 1419960892420051353}
+  skill_lvl: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &1419960892551953581
 GameObject:
   m_ObjectHideFlags: 0
