@@ -30,7 +30,10 @@ public class S_HeroSee : MonoBehaviour
             {
                 float checkDistance = Vector2.Distance(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.5f, gameObject.transform.position.z), item.transform.position);
 
-                item.GetComponent<SpriteRenderer>().color = Color.white;
+                if (item.TryGetComponent(out SpriteRenderer Sprite))
+                {
+                    Sprite.color = Color.white;
+                }
 
                 if (checkDistance < minDistance)
                 {
@@ -44,7 +47,10 @@ public class S_HeroSee : MonoBehaviour
 
             if (Target != null) // можно стрелять (цель обнаружена)
             {
-                Target.GetComponent<SpriteRenderer>().color = Color.red;
+                if (Target.TryGetComponent(out SpriteRenderer Sprite))
+                {
+                    Sprite.color = Color.red;
+                }
                 canShot = true;
             }
             else
@@ -61,11 +67,11 @@ public class S_HeroSee : MonoBehaviour
             yield return new WaitUntil(() => canShot);
             if (Target != null)
 
-            // обычная стрельба 
-            S_shot.Shot(Target.transform);
+                // обычная стрельба 
+                S_shot.Shot(Target.transform);
 
             // особая стрельба (работает отдельно) 
-            
+
 
             yield return new WaitForSeconds(timeForReloadOfShot);
         }
@@ -89,7 +95,11 @@ public class S_HeroSee : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<S_moveEnemy>(out S_moveEnemy s_moveEnemy))
         {
-            collision.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            if (collision.TryGetComponent(out SpriteRenderer Sprite))
+            {
+                Sprite.color = Color.white;
+            }
+
             ISeeIts.Remove(collision.gameObject);
             s_moveEnemy.event_DeadEnemy -= RemoveEnemyFromList;
         }

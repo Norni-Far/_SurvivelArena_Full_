@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 335906938394060877}
   - component: {fileID: 3533799523170838816}
   - component: {fileID: 5749503164603365656}
+  - component: {fileID: 7595115502000415617}
   m_Layer: 0
   m_Name: Enemy_Sliz
   m_TagString: Finish
@@ -186,3 +187,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExpObj: {fileID: 1126368404118400808, guid: 6d038c6f2e2c90d42b815c1bff15770f, type: 3}
   percentOflut: 60
+--- !u!114 &7595115502000415617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126368404118400808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9f5df0e0fc89041be4b81e785bd0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteObject: {fileID: 1126368404118400810}
