@@ -6,26 +6,25 @@ using UnityEngine.UI;
 public class S_Skill_Add : MonoBehaviour
 {
     [SerializeField] GameObject content_skills;
-    [SerializeField] private GameObject[] skill_Obj = new GameObject[10];
+    [SerializeField] private List<GameObject> skill_Obj = new List<GameObject> (2);
     [SerializeField] public int[] skill_lvl = new int[10]; //для того, чтобы знать какой лвл прокачки у скила
 
     private void OnEnable()
     {
         
         RandomSkill();
-
     }
 
     private void RandomSkill()
     {
         for (int i = 0; i < 10; i++)
         {
-            int number = Random.Range(0, 3);
+            int number = Random.Range(0, skill_Obj.Count);
             skill_Obj[number].transform.SetAsFirstSibling();
 
         }
        
-        for (int i = 0; i < content_skills.transform.childCount - 1; i++)
+        for (int i = 0; i < skill_Obj.Count - 1; i++)
         {
             switch (i)
             {
@@ -39,7 +38,7 @@ public class S_Skill_Add : MonoBehaviour
                     skill3(skill_Obj[i]);
                     break;
                 case 3:
-                    skill2(skill_Obj[i]);
+                    skill4(skill_Obj[i]);
                     break;
             }
         }
@@ -95,6 +94,28 @@ public class S_Skill_Add : MonoBehaviour
                 break;
             case 3:
              //   panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Подожженые враги наносят урон ближайшим врагам.";
+                break;
+        }
+    }
+
+    private void skill4(GameObject panel)
+    {
+        switch (skill_lvl[2])
+        {
+            case 0:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Переодически падает метеорит.";
+                break;
+            case 1:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Умелививает урон на 20";
+                break;
+            case 2:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Метеорит падает чаще.";
+                break;
+            case 3:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Метеорит оставляет огненный след";
+                break;
+            case 4:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Огненный след замедляет передвижение врагов";
                 break;
         }
     }

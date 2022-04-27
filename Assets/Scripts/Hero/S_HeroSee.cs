@@ -5,7 +5,7 @@ using UnityEngine;
 public class S_HeroSee : MonoBehaviour
 {
     [SerializeField] private S_Shot S_shot;
-    [SerializeField] private S_SpecialShot s_SpecialShot;
+    [SerializeField] private S_Meteor s_SpecialShot;
 
     [SerializeField] private CircleCollider2D CircleRadiusSee;
     [SerializeField] private List<GameObject> ISeeIts = new List<GameObject>();

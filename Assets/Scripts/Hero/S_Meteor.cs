@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_SpecialShot : MonoBehaviour
+public class S_Meteor : MonoBehaviour
 {
     [SerializeField] private GameObject prefabMeteor;
     [SerializeField] private GameObject prefabPlaceOfmeteor;

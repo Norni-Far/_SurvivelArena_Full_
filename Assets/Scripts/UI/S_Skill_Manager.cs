@@ -5,7 +5,7 @@ using UnityEngine;
 public class S_Skill_Manager : MonoBehaviour
 {
     [SerializeField] private S_Shot S_Shot;
-    public int[] skill_lvl = new int[10];
+    public List<int> skill_lvl = new List<int> (10);
     
     
 
@@ -23,6 +23,9 @@ public class S_Skill_Manager : MonoBehaviour
                 break;
             case 2:
                 ExploreSkill_3();
+                break;
+            case 3:
+                ExploreSkill_4();
                 break;
         }
     }
@@ -72,6 +75,21 @@ public class S_Skill_Manager : MonoBehaviour
         {
             case 1:
                 S_Shot.numberOfBullet = 1;
+                break;
+            case 2:
+                transform.GetComponent<S_Shot>().fireDamage += 3;
+                break;
+            case 3:
+                transform.GetComponent<S_Many_Shots>().bulletPrefab = transform.GetComponent<S_Shot>().bulletPrefab[1];
+                break;
+        }
+    }
+    private void ExploreSkill_4()
+    {
+        switch (skill_lvl[2])
+        {
+            case 1:
+                transform.GetComponent<S_Meteor>().enabled = true;
                 break;
             case 2:
                 transform.GetComponent<S_Shot>().fireDamage += 3;
