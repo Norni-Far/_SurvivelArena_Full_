@@ -29,7 +29,6 @@ public class S_Lut_moveToHero : MonoBehaviour
     {
         if (collision.TryGetComponent(out S_Herohealth S_Hero))
         {
-            print(1);
             Player = S_Hero.gameObject;
             Go = true;
         }

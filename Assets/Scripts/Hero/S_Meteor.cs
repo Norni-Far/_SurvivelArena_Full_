@@ -10,9 +10,10 @@ public class S_Meteor : MonoBehaviour
     [SerializeField] private S_HeroSee S_HeroSee;
 
     public float reloadForspecialWeapons;
+    public int damageFromMeteor;
+    public float radiusOfDamage;
 
     private GameObject targetEnemy;
-
     private void Start()
     {
         StartCoroutine(StartReloudSpecialWeapons());
@@ -29,14 +30,22 @@ public class S_Meteor : MonoBehaviour
             if (targetEnemy != null)
             {
                 GameObject place = Instantiate(prefabPlaceOfmeteor, targetEnemy.transform.position, transform.rotation, null);
-                GameObject inst = Instantiate(prefabMeteor, new Vector3(transform.position.x + 10, transform.position.y + 10, transform.position.z), transform.rotation, null);
+                GameObject meteor = Instantiate(prefabMeteor, new Vector3(transform.position.x + 10, transform.position.y + 10, transform.position.z), transform.rotation, null);
+                SetPropetiess(meteor.GetComponent<S_MeteorCollision>());
 
-                inst.GetComponent<S_MeteorMove>().targetPlace = place.transform;
+                meteor.GetComponent<S_MeteorMove>().targetPlace = place.transform;
 
                 yield return new WaitForSeconds(reloadForspecialWeapons);
             }
 
             yield return new WaitForSeconds(1f);
         }
+    }
+
+
+    private void SetPropetiess(S_MeteorCollision S_meteor)
+    {
+        S_meteor.damage = damageFromMeteor;
+        S_meteor.radiusDamage = radiusOfDamage;
     }
 }

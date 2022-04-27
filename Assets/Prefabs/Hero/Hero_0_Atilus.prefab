@@ -205,6 +205,8 @@ MonoBehaviour:
   prefabPlaceOfmeteor: {fileID: 8678564591322682616, guid: 647d07f2b559c3144895a96d41bf4c9b, type: 3}
   S_HeroSee: {fileID: 1419960892420051428}
   reloadForspecialWeapons: 10
+  damageFromMeteor: 0
+  radiusOfDamage: 0.5
 --- !u!114 &487519576174258472
 MonoBehaviour:
   m_ObjectHideFlags: 0
