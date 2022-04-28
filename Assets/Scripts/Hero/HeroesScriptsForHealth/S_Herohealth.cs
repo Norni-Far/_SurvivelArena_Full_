@@ -7,7 +7,7 @@ public class S_Herohealth : MonoBehaviour
     public delegate void delegats();
     public event delegats event_deadHero;
     public int dodgeRange;
-    public int timeHpRegen;
+    public int HpRegen = 0;
     public int HealthMax = 400;
 
     [SerializeField] private RectTransform hp_jbject;
@@ -21,7 +21,7 @@ public class S_Herohealth : MonoBehaviour
     private void Start()
     {
         startHealth = Health;
-        StartCoroutine(HpRegen());
+        StartCoroutine(HpRegenTimer());
     }
 
     private void Update()
@@ -76,17 +76,16 @@ public class S_Herohealth : MonoBehaviour
         return damage;
         
     }
-    IEnumerator HpRegen()
+    IEnumerator HpRegenTimer()
     {
         while (true)
         {
             if (Health < HealthMax)
             {
-                Health++;
-                print(1);
+                Health += HpRegen;
             }
            
-            yield return new WaitForSeconds(timeHpRegen);
+            yield return new WaitForSeconds(1f);
         }
         
     }

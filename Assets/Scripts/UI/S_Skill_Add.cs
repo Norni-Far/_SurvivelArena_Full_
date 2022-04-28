@@ -161,6 +161,9 @@ public class S_Skill_Add : MonoBehaviour
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "ƒает регенерацию здоровь€.";
                 break;
             case 3:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "”величивает регенерацию здоровь€.";
+                break;
+            case 4:
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "ѕри смертельной атаке вы получаете второй шанс.";
                 break;
         }

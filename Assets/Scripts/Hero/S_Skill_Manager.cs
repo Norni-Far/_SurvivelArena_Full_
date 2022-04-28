@@ -28,6 +28,15 @@ public class S_Skill_Manager : MonoBehaviour
             case 3:
                 ExploreSkill_4(number);
                 break;
+            case 4:
+                ExploreSkill_5(number);
+                break;
+            case 5:
+                ExploreSkill_6(number);
+                break;
+            case 6:
+                ExploreSkill_7(number);
+                break;
         }
     }
 
@@ -129,15 +138,39 @@ public class S_Skill_Manager : MonoBehaviour
         {
             case 1:
                 transform.GetComponent<S_Herohealth>().Health +=100;
+                transform.GetComponent<S_Herohealth>().HealthMax += 100;
                 break;
             case 2:
                 transform.GetComponent<S_Herohealth>().Health += 200;
+                transform.GetComponent<S_Herohealth>().HealthMax += 200;
                 break;
             case 3:
-                transform.GetComponent<S_Herohealth>().dodgeRange += 10;
+                transform.GetComponent<S_Herohealth>().HpRegen += 2;
                 break;
             case 4:
-                transform.GetComponent<S_Herohealth>().dodgeRange += 20;
+                transform.GetComponent<S_Herohealth>().HpRegen += 10;
+                break;
+            case 5:
+               // transform.GetComponent<S_Herohealth>().HpRegen += 10;
+                break;
+        }
+    }
+
+    private void ExploreSkill_7(int number)
+    {
+        switch (skill_lvl[number])
+        {
+            case 1:
+                transform.GetComponent<S_Shot>().damage += 5;
+                break;
+            case 2:
+                transform.GetComponent<S_Shot>().damage += 10;
+                break;
+            case 3:
+               // transform.GetComponent<S_Herohealth>().dodgeRange += 10;
+                break;
+            case 4:
+            //    transform.GetComponent<S_Herohealth>().dodgeRange += 20;
                 break;
         }
     }
