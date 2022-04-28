@@ -12,28 +12,29 @@ public class S_Skill_Manager : MonoBehaviour
     public void ExploreSkill(int number)   
     {
 
+       
         skill_lvl[number]++;
         switch (number)
         {
             case 0:
-                ExploreSkill_1();
+                ExploreSkill_1(number);
                 break;
             case 1:
-                ExploreSkill_2();
+                ExploreSkill_2(number);
                 break;
             case 2:
-                ExploreSkill_3();
+                ExploreSkill_3(number);
                 break;
             case 3:
-                ExploreSkill_4();
+                ExploreSkill_4(number);
                 break;
         }
     }
 
 
-    private void ExploreSkill_1()
+    private void ExploreSkill_1(int number)
     {
-        switch (skill_lvl[0])
+        switch (skill_lvl[number])
         {
             case 1:
                 S_Shot.skill_active[0] = true;
@@ -50,9 +51,9 @@ public class S_Skill_Manager : MonoBehaviour
         }
     }
 
-    private void ExploreSkill_2()
+    private void ExploreSkill_2(int number)
     {
-        switch (skill_lvl[1])
+        switch (skill_lvl[number])
         {
             case 1:
                 S_Shot.skill_active[1] = true;
@@ -69,9 +70,9 @@ public class S_Skill_Manager : MonoBehaviour
                 break;
         }
     }
-    private void ExploreSkill_3()
+    private void ExploreSkill_3(int number)
     {
-        switch (skill_lvl[2])
+        switch (skill_lvl[number])
         {
             case 1:
                 S_Shot.numberOfBullet = 1;
@@ -84,18 +85,59 @@ public class S_Skill_Manager : MonoBehaviour
                 break;
         }
     }
-    private void ExploreSkill_4()
+    private void ExploreSkill_4(int number)
     {
-        switch (skill_lvl[2])
+        switch (skill_lvl[number])
         {
             case 1:
                 transform.GetComponent<S_Meteor>().enabled = true;
                 break;
             case 2:
-                transform.GetComponent<S_Shot>().fireDamage += 3;
+                transform.GetComponent<S_Meteor>().damageFromMeteor += 40;
                 break;
             case 3:
-                transform.GetComponent<S_Many_Shots>().bulletPrefab = transform.GetComponent<S_Shot>().bulletPrefab[1];
+                transform.GetComponent<S_Meteor>().recharge *= 0.6f;
+                break;
+            case 4:
+              //  transform.GetComponent<S_Meteor>().recharge *= 0.6f;
+                break;
+        }
+    }
+
+    private void ExploreSkill_5(int number)
+    {
+        switch (skill_lvl[number])
+        {
+            case 1:
+                transform.GetComponent<S_HeroMove>().VelocityOfHero *= 1.2f;
+                break;
+            case 2:
+                transform.GetComponent<S_HeroMove>().VelocityOfHero *= 1.2f;
+                break;
+            case 3:
+                transform.GetComponent<S_Herohealth>().dodgeRange += 10;
+                break;
+            case 4:
+                transform.GetComponent<S_Herohealth>().dodgeRange += 20;
+                break;
+        }
+    }
+
+    private void ExploreSkill_6(int number)
+    {
+        switch (skill_lvl[number])
+        {
+            case 1:
+                transform.GetComponent<S_Herohealth>().Health +=100;
+                break;
+            case 2:
+                transform.GetComponent<S_Herohealth>().Health += 200;
+                break;
+            case 3:
+                transform.GetComponent<S_Herohealth>().dodgeRange += 10;
+                break;
+            case 4:
+                transform.GetComponent<S_Herohealth>().dodgeRange += 20;
                 break;
         }
     }

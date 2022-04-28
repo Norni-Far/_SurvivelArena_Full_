@@ -100,7 +100,7 @@ MonoBehaviour:
   ImageGameObject: {fileID: 1419960894146427964}
   HanglePoint: {fileID: 0}
   rb: {fileID: 1419960892420051354}
-  VelocityOfHero: 2
+  VelocityOfHero: 1.5
 --- !u!114 &1419960892420051352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +113,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc735f84024c44b4da0862269e569b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dodgeRange: 0
+  timeHpRegen: 2
+  HealthMax: 200
   hp_jbject: {fileID: 1419960892984107822}
-  Health: 500
+  Health: 200
 --- !u!114 &1419960892420051428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,8 +208,9 @@ MonoBehaviour:
   prefabPlaceOfmeteor: {fileID: 8678564591322682616, guid: 647d07f2b559c3144895a96d41bf4c9b, type: 3}
   S_HeroSee: {fileID: 1419960892420051428}
   reloadForspecialWeapons: 10
-  damageFromMeteor: 0
+  damageFromMeteor: 20
   radiusOfDamage: 0.5
+  recharge: 1
 --- !u!114 &487519576174258472
 MonoBehaviour:
   m_ObjectHideFlags: 0

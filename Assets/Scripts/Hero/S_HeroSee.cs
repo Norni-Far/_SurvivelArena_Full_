@@ -20,6 +20,7 @@ public class S_HeroSee : MonoBehaviour
         StartCoroutine(TimerForFire());
     }
 
+
     IEnumerator UpdateListOfEnemy()
     {
         while (true)

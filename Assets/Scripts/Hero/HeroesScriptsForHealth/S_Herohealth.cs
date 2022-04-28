@@ -1,18 +1,27 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 public class S_Herohealth : MonoBehaviour
 {
     public delegate void delegats();
     public event delegats event_deadHero;
+    public int dodgeRange;
+    public int timeHpRegen;
+    public int HealthMax = 400;
 
     [SerializeField] private RectTransform hp_jbject;
 
-    [SerializeField] private int Health;
+    [SerializeField] public int Health;
     private int startHealth;
+
+
+
 
     private void Start()
     {
         startHealth = Health;
+        StartCoroutine(HpRegen());
     }
 
     private void Update()
@@ -48,14 +57,37 @@ public class S_Herohealth : MonoBehaviour
 
         }
 
-        if(Enemy.TryGetComponent(out S_ArcherCollision S_arrow)) // дальники 
+        if (Enemy.TryGetComponent(out S_ArcherCollision S_arrow)) // дальники 
         {
             //return;
         }
-
+        dodgeDamage(Damage); // скилл уклонения
         Health -= Damage;
         if (Health <= 0)
             event_deadHero?.Invoke();
 
+    }
+
+    private int dodgeDamage(int damage)
+    {
+        int rnd = Random.Range(0, 100);
+        if (rnd < dodgeRange)
+            damage = 0;
+        return damage;
+        
+    }
+    IEnumerator HpRegen()
+    {
+        while (true)
+        {
+            if (Health < HealthMax)
+            {
+                Health++;
+                print(1);
+            }
+           
+            yield return new WaitForSeconds(timeHpRegen);
+        }
+        
     }
 }

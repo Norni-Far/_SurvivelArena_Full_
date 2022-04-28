@@ -12,6 +12,7 @@ public class S_Meteor : MonoBehaviour
     public float reloadForspecialWeapons;
     public int damageFromMeteor;
     public float radiusOfDamage;
+    public float recharge = 1f;
 
     private GameObject targetEnemy;
     private void Start()
@@ -38,7 +39,7 @@ public class S_Meteor : MonoBehaviour
                 yield return new WaitForSeconds(reloadForspecialWeapons);
             }
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(recharge);
         }
     }
 

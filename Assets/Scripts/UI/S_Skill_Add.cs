@@ -29,24 +29,33 @@ public class S_Skill_Add : MonoBehaviour
             switch (i)
             {
                 case 0:
-                    skill1(skill_Obj[i]);
+                    skill1(skill_Obj[i],i);
                     break;
                 case 1:
-                    skill2(skill_Obj[i]);
+                    skill2(skill_Obj[i],i);
                     break;
                 case 2:
-                    skill3(skill_Obj[i]);
+                    skill3(skill_Obj[i], i);
                     break;
                 case 3:
-                    skill4(skill_Obj[i]);
+                    skill4(skill_Obj[i], i);
+                    break;
+                case 4:
+                    skill5(skill_Obj[i], i);
+                    break;
+                case 5:
+                    skill6(skill_Obj[i], i);
+                    break;
+                case 6:
+                    skill7(skill_Obj[i], i);
                     break;
             }
         }
     }
 
-    private void skill1(GameObject panel)
+    private void skill1(GameObject panel,int number)
     {
-        switch (skill_lvl[0])
+        switch (skill_lvl[number])
         {
             case 0:
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Дает один дополнительный снаряд.";
@@ -60,15 +69,15 @@ public class S_Skill_Add : MonoBehaviour
         }
     }
 
-    private void skill2(GameObject panel)
+    private void skill2(GameObject panel, int number)
     {
-        switch (skill_lvl[1])
+        switch (skill_lvl[number])
         {
             case 0:
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Стреляет сразу тремя снарядами.";
                 break;
             case 1:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон дополнительных снарядов на 5";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон дополнительных снарядов на 5.";
                 break;
             case 2:
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон дополнительных снарядов на 10.";
@@ -79,15 +88,15 @@ public class S_Skill_Add : MonoBehaviour
         }
     }
 
-    private void skill3(GameObject panel)
+    private void skill3(GameObject panel, int number)
     {
-        switch (skill_lvl[2])
+        switch (skill_lvl[number])
         {
             case 0:
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Добовляет к основному заряду огненный эффект.";
                 break;
             case 1:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон от поджога на 3";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон от поджога на 3.";
                 break;
             case 2:
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Добавляет огненный поджег дополнительным снарядам.";
@@ -98,24 +107,80 @@ public class S_Skill_Add : MonoBehaviour
         }
     }
 
-    private void skill4(GameObject panel)
+    private void skill4(GameObject panel, int number)
     {
-        switch (skill_lvl[2])
+        switch (skill_lvl[number])
         {
             case 0:
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Переодически падает метеорит.";
                 break;
             case 1:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Умелививает урон на 20";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Умелививает урон на 40.";
                 break;
             case 2:
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Метеорит падает чаще.";
                 break;
             case 3:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Метеорит оставляет огненный след";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Метеорит оставляет огненный след.";
                 break;
             case 4:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Огненный след замедляет передвижение врагов";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Огненный след замедляет передвижение врагов.";
+                break;
+        }
+    }
+
+    private void skill5(GameObject panel, int number)
+    {
+        switch (skill_lvl[number])
+        {
+            case 0:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает скорость бега.";
+                break;
+            case 1:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает скорость бега.";
+                break;
+            case 2:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Дает шанс увернуться от атаки.";
+                break;
+            case 3:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает шанс уворота.";
+                break;
+        }
+    }
+    private void skill6(GameObject panel, int number)
+    {
+        switch (skill_lvl[number])
+        {
+            case 0:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает здоровье на 100.";
+                break;
+            case 1:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает здоровье на 200.";
+                break;
+            case 2:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Дает регенерацию здоровья.";
+                break;
+            case 3:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "При смертельной атаке вы получаете второй шанс.";
+                break;
+        }
+    }
+
+    private void skill7(GameObject panel, int number)
+    {
+        switch (skill_lvl[number])
+        {
+            case 0:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон.";
+                break;
+            case 1:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон."; // сколько???
+                break;
+            case 2:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Удар по одной и той же цели увеличивает урон.";
+                break;
+            case 3:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "За каждого убитого врага герой получает дополнительный урон";
                 break;
         }
     }

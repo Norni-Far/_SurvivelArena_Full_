@@ -11,7 +11,7 @@ public class S_HeroMove : MonoBehaviour
     public RectTransform HanglePoint;
     [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField] private float VelocityOfHero;
+    [SerializeField] public float VelocityOfHero;
 
     private float Move_x;
     private float Move_y;
