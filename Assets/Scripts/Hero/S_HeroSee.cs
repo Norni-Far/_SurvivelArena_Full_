@@ -106,5 +106,13 @@ public class S_HeroSee : MonoBehaviour
         }
     }
 
+    public void menu()
+    {
 
+    }
+
+    public void restart()
+    {
+
+    }
 }
