@@ -5,11 +5,11 @@ using UnityEngine;
 public class Game_Manager : MonoBehaviour
 {
     // Скрипты
-
     [SerializeField] private UI_Manager UI_Manager;
     [SerializeField] private S_MainCamera MainCamera;
     [SerializeField] private S_SpawnEnemy SpawnEnemy;
     [SerializeField] private S_Subscribes S_Subscribes;
+    [SerializeField] private S_ShowHeroHealth_onCanvas S_showHPPlaeyr;
 
     // Герой 
     [SerializeField] private GameObject[] ChosenCharacter;
@@ -48,5 +48,6 @@ public class Game_Manager : MonoBehaviour
 
         MainCamera.SetPlayer(Character.transform);
         SpawnEnemy.SetPlayer(Character);
+        S_showHPPlaeyr.SetPlayer(Character);  // перенос персонажа для показа его хп через канвас
     }
 }

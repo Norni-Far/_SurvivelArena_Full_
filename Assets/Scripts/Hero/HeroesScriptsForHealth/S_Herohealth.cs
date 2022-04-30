@@ -7,20 +7,17 @@ public class S_Herohealth : MonoBehaviour
     public delegate void delegats();
     public event delegats event_deadHero;
     public int dodgeRange;
+
     public int HpRegen = 0;
     public int HealthMax = 400;
+    public int Health;
 
     [SerializeField] private RectTransform hp_jbject;
-
-    [SerializeField] public int Health;
     private int startHealth;
-
-
-
-
     private void Start()
     {
         startHealth = Health;
+        Health = HealthMax;
         StartCoroutine(HpRegenTimer());
     }
 
@@ -32,6 +29,8 @@ public class S_Herohealth : MonoBehaviour
     #region ShowHP
     private void ShowHpHero()
     {
+        startHealth = HealthMax;
+
         if (hp_jbject.transform.localPosition.x > -0.75f)
             hp_jbject.transform.localPosition = new Vector3(ChangeHpHero(), 0, 0);
     }
@@ -61,7 +60,9 @@ public class S_Herohealth : MonoBehaviour
         {
             //return;
         }
+
         dodgeDamage(Damage); // скилл уклонения
+
         Health -= Damage;
         if (Health <= 0)
             event_deadHero?.Invoke();
