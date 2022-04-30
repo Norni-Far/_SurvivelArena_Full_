@@ -24,7 +24,7 @@ public class S_Skill_Add : MonoBehaviour
 
         }
        
-        for (int i = 0; i < skill_Obj.Count - 1; i++)
+        for (int i = 0; i < skill_Obj.Count; i++)
         {
             switch (i)
             {
