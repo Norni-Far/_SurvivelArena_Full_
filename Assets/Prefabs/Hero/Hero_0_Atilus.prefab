@@ -159,7 +159,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   skill_active: 0000000000000000000000000000000000000000
-  damage: 1
+  damage: 10
   pauseShot: 0.3
   numberOfBullet: 0
   fireDamage: 1

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class S_skroll_hero_panel : MonoBehaviour
+public class S_scroll_hero_panel : MonoBehaviour
 {
 
     [SerializeField] GameObject[] panel_hero = new GameObject[10];
