@@ -114,10 +114,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dodgeRange: 0
-  timeHpRegen: 2
+  HpRegen: 0
   HealthMax: 200
-  hp_jbject: {fileID: 1419960892984107822}
   Health: 200
+  hp_jbject: {fileID: 1419960892984107822}
 --- !u!114 &1419960892420051428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   skill_active: 0000000000000000000000000000000000000000
-  damage: 10
+  damage: 1
   pauseShot: 0.3
   numberOfBullet: 0
   fireDamage: 1

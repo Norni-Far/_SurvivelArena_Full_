@@ -78,9 +78,12 @@ public class S_SpawnEnemy : MonoBehaviour
     {
         int rnd = Random.Range(0, 101);
 
-        if (rnd < 80)
-            return 0;
-        else
+
+        if (rnd < 10)
+            return 2;
+        else if (rnd < 50)
             return 1;
+        else
+            return 0;
     }
 }

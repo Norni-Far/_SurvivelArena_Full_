@@ -32,10 +32,13 @@ public class S_Shot : MonoBehaviour
                 GameObject inst = Instantiate(bulletPrefab[numberOfBullet], rock.transform.position, gameObject.transform.rotation);
                 inst.GetComponent<S_bullet_collider>().damage = damage;
                 RotationInst(inst, Target);
+
                 if (skill_active[1])
                     transform.GetComponent<S_Many_Shots>().Shot(Target);
-                if (inst.TryGetComponent(out S_FireForEnemy_SubtractHP fire))
-                    inst.GetComponent<S_FireForEnemy_SubtractHP>().fireDamage = fireDamage;
+                if (inst.TryGetComponent(out S_SendFireFromFireBall fire))
+                    inst.GetComponent<S_SendFireFromFireBall>().fireDamage = fireDamage;
+                
+
                 yield return new WaitForSeconds(waitTime);
             }
            

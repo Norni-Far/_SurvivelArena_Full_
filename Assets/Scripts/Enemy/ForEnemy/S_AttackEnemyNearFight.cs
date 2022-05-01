@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class S_AttackEnemyNearFight : MonoBehaviour
 {
+    //для изменений 
+    public int Damage;
+
     [SerializeField] private GameObject PrefabsEffectDamage;
-    [SerializeField] private int Damage;
     [SerializeField] private float ReloadAttack;
 
     private GameObject TuchObject;
