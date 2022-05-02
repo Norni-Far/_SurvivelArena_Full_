@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1126368404118400811}
   - component: {fileID: 1126368404118400812}
   - component: {fileID: -883782567164170107}
+  - component: {fileID: 4186029980318911206}
   m_Layer: 0
   m_Name: Enemy_Expirience_
   m_TagString: lut
@@ -138,6 +139,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: 1
+--- !u!95 &4186029980318911206
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126368404118400808}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5553aafc3058a354ab9fd9ca5cd959bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3915322332639214139
 GameObject:
   m_ObjectHideFlags: 0

@@ -54,6 +54,7 @@ public class S_HeroMove : MonoBehaviour
 
     private void Update()
     {
+        //gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.y / 100);
         //gameObject.GetComponent<SpriteRenderer>().sortingOrder = Convert.ToInt32(Math.Ceiling(gameObject.transform.position.y) * -1);
         //gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.y); // уровень с деревьями (заходить за них)
         HeroAnimator.SetFloat("Hungle_X", Move_x);

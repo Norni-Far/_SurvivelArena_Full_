@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3533799523170838816}
   - component: {fileID: 5749503164603365656}
   - component: {fileID: 7595115502000415617}
+  - component: {fileID: 4396177692675758328}
   m_Layer: 0
   m_Name: Enemy_Sliz
   m_TagString: Finish
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 881f7b2ecf8d2414986effbb836f7bd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -141,6 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hero: {fileID: 0}
+  nowDistance: 0
+  notLessDistance: 0
   distans: 0
   speed: 1
   isMoving: 0
@@ -156,8 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074ac5fb1952fad4d80f256ec1306a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefabsEffectDamage: {fileID: 2827358817270521779, guid: 62393d597c4958347aca6fa6f6b3be35, type: 3}
   Damage: 10
+  PrefabsEffectDamage: {fileID: 2827358817270521779, guid: 62393d597c4958347aca6fa6f6b3be35, type: 3}
   ReloadAttack: 5
 --- !u!114 &3533799523170838816
 MonoBehaviour:
@@ -200,3 +203,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteObject: {fileID: 1126368404118400810}
+--- !u!114 &4396177692675758328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126368404118400808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01c25320880bab4ba1faf0cd18ff145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

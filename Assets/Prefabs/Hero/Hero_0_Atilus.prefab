@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 3905497464034279921}
   - component: {fileID: 9068065561950138685}
   - component: {fileID: 487519576174258472}
+  - component: {fileID: 6801170974549865435}
   m_Layer: 0
   m_Name: Hero_0_Atilus
   m_TagString: Untagged
@@ -225,6 +226,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   S_Shot: {fileID: 1419960892420051353}
   skill_lvl: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!114 &6801170974549865435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419960892420051430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01c25320880bab4ba1faf0cd18ff145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1419960892551953581
 GameObject:
   m_ObjectHideFlags: 0

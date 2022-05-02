@@ -1,12 +1,13 @@
 using UnityEngine;
 
+
 public class UI_Manager : MonoBehaviour
 {
     [SerializeField] private S_Lvl_Slider S_Lvl_Slider;
     [SerializeField] private S_Text_Dead S_Text_Dead;
     [SerializeField] private GameObject LvlUpPanel;
 
-    public void GiveExporoenceFromGero(int exp)
+    public void GiveExpirienceFromHero(int exp)
     {
         S_Lvl_Slider.Give_Exp(exp);
     }
@@ -24,6 +25,7 @@ public class UI_Manager : MonoBehaviour
             Time.timeScale = 1;
         else
             Time.timeScale = 0;
+
     }
 
 }

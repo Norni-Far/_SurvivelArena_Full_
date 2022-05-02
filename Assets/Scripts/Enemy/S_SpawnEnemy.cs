@@ -7,15 +7,17 @@ public class S_SpawnEnemy : MonoBehaviour
     [SerializeField] private GameObject[] enemyPrefabs_Monsters = new GameObject[5];
     [SerializeField] private float timeSpawn;
     [SerializeField] private int maxCountEnemy;
+    [Range(min: 5, max: 30)] [SerializeField] private int distanceForTeleportOfEnemy;
     [SerializeField] private List<GameObject> EnemyList = new List<GameObject>();
+
 
     //[SerializeField] private Transform cameratr;
     //[SerializeField] private Camera Camera1;
 
     private GameObject hero;
 
-    private Vector2 cameraXY;
-    private Vector2 cameraXYup;
+    //private Vector2 cameraXY;
+    //private Vector2 cameraXYup;
 
     public void SetPlayer(GameObject Player) => hero = Player;
 
@@ -34,9 +36,6 @@ public class S_SpawnEnemy : MonoBehaviour
 
             if (EnemyList.Count < maxCountEnemy)
             {
-                // вборка объекта для спавна 
-
-
                 // создаем обэект и добовляем его в лист
                 GameObject monsterdObj = Instantiate(enemyPrefabs_Monsters[ChooseEnemyForSpawn()]);
                 monsterdObj.GetComponent<S_moveEnemy>().hero = hero;
@@ -45,29 +44,10 @@ public class S_SpawnEnemy : MonoBehaviour
                 // подписка/слежение менеджера за удалением объекта 
                 monsterdObj.GetComponent<S_moveEnemy>().event_DeadEnemy += RemoveEnemyFromList;
 
-                //перемещает объект за границы экрана
-                cameraXY.x = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane)).x;
-                cameraXY.y = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane)).y;
-                cameraXYup.x = Camera.main.ViewportToWorldPoint(new Vector3(1f, 1f, Camera.main.nearClipPlane)).x;
-                cameraXYup.y = Camera.main.ViewportToWorldPoint(new Vector3(1f, 1f, Camera.main.nearClipPlane)).y;
+                // перемещение врага к границам камеры 
+                monsterdObj.GetComponent<S_moveEnemy>().MoveTowwardsHeroCamera();
+                monsterdObj.GetComponent<S_moveEnemy>().notLessDistance = distanceForTeleportOfEnemy;  // передача наименьшей дистанции для телепорта
 
-                int i = Random.Range(1, 5);
-                switch (i)
-                {
-                    case 1:
-                        monsterdObj.transform.localPosition = new Vector2((float)Random.Range(cameraXY.x, cameraXYup.x), cameraXYup.y + 0.2f);
-                        break;
-                    case 2:
-                        monsterdObj.transform.localPosition = new Vector2((float)Random.Range(cameraXY.x, cameraXYup.x), cameraXY.y - 0.2f);
-                        break;
-
-                    case 3:
-                        monsterdObj.transform.localPosition = new Vector2(cameraXYup.x + 0.2f, (float)Random.Range(cameraXY.y, cameraXYup.y));
-                        break;
-                    case 4:
-                        monsterdObj.transform.localPosition = new Vector2(cameraXY.x - 0.2f, (float)Random.Range(cameraXY.y, cameraXYup.y));
-                        break;
-                }
             }
         }
     }
@@ -80,10 +60,10 @@ public class S_SpawnEnemy : MonoBehaviour
 
 
         if (rnd < 10)
-            return 2;
+            return 2;    // берсерк
         else if (rnd < 50)
-            return 1;
+            return 1;  // лучник
         else
-            return 0;
+            return 0;   // слизень
     }
 }
