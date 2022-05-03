@@ -36,13 +36,11 @@ public class S_scroll_hero_panel : MonoBehaviour
     {
         if (active)
         {
-
-            print(speed);
+            
             speed += 0.5f; // ускорение
             if (panel_hero[activePanelHero].transform.position.x < Screen.width/2 + 40 && panel_hero[activePanelHero].transform.position.x > Screen.width / 2 - 40 && speed > 3)
             {
                 speed = speed / 5f;
-              //  print()
             }
             if (direction)
                 transform.position = new Vector2(transform.position.x - speed, transform.position.y);

@@ -9,6 +9,7 @@ public class S_Text_Dead : MonoBehaviour
     private bool dead;
     private float a; //прозрачность панели
     [SerializeField] private S_Scene_Manager Scene_Manager;
+    [SerializeField] private S_WorldOfTime WorldOfTime;
 
 
     public void TextDeadActive() 
@@ -27,7 +28,7 @@ public class S_Text_Dead : MonoBehaviour
                 buttonRestart.SetActive(true);
                 buttonMenu.SetActive(true);
                 textDead.SetActive(true);
-                Time.timeScale = 0;
+                WorldOfTime.pauseOnPause();
             }
         }
     }

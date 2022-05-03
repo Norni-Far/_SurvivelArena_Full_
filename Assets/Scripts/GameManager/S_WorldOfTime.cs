@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class S_WorldOfTime : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool pause;
 
-    // Update is called once per frame
-    void Update()
+    public void FrozeTime(int number)
     {
-        
+        Time.timeScale = number;
+    }
+    public void pauseOnPause()
+    {
+        pause = !pause;
+        if (pause)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
+
+
     }
 }
