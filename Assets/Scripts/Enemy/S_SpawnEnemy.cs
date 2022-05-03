@@ -9,6 +9,7 @@ public class S_SpawnEnemy : MonoBehaviour
     [SerializeField] private int maxCountEnemy;
     [Range(min: 5, max: 30)] [SerializeField] private int distanceForTeleportOfEnemy;
     [SerializeField] private List<GameObject> EnemyList = new List<GameObject>();
+    [SerializeField] private S_Save_points Save_Points;
 
 
     //[SerializeField] private Transform cameratr;
@@ -47,6 +48,8 @@ public class S_SpawnEnemy : MonoBehaviour
                 // перемещение врага к границам камеры 
                 monsterdObj.GetComponent<S_moveEnemy>().MoveTowwardsHeroCamera();
                 monsterdObj.GetComponent<S_moveEnemy>().notLessDistance = distanceForTeleportOfEnemy;  // передача наименьшей дистанции для телепорта
+
+                monsterdObj.GetComponent<S_Point_for_table>().Save_Points = Save_Points;
 
             }
         }

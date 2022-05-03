@@ -17,7 +17,7 @@ public class S_Hp_enemy : MonoBehaviour
             transform.GetComponent<S_Lut_after_dead>().Lut();
             if (prefabExplosEnemy != null)
                 Instantiate(prefabExplosEnemy, transform.position, transform.rotation, null);
-
+            transform.GetComponent<S_Point_for_table>().DeadPoints();
             Destroy(gameObject);
         }
     }

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5749503164603365656}
   - component: {fileID: 7595115502000415617}
   - component: {fileID: 4396177692675758328}
+  - component: {fileID: -4437246205998579269}
   m_Layer: 0
   m_Name: Enemy_Sliz
   m_TagString: Finish
@@ -215,3 +216,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01c25320880bab4ba1faf0cd18ff145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4437246205998579269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126368404118400808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c95798af3197a439a5eb3a011abfbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Save_Points: {fileID: 0}
+  point: 1
