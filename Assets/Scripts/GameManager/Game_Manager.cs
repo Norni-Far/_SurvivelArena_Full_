@@ -24,7 +24,7 @@ public class Game_Manager : MonoBehaviour
     public void StartForBtn()
     {
         // загрузка номмера героя
-        NumberHero = 1; //S_LoadFromScene.LoadFromScene();
+        NumberHero = 0; //S_LoadFromScene.LoadFromScene();
 
         //создание героя 
         Character = Instantiate(ChosenCharacter[NumberHero], gameObject.transform);
