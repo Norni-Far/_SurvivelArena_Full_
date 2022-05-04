@@ -1,33 +1,41 @@
-using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class S_Herohealth : MonoBehaviour
 {
+    //скрипты 
+    [SerializeField] private S_HeroSee s_See;
+
     public delegate void delegats();
     public event delegats event_deadHero;
-    public int dodgeRange;
 
+    public int numberOfHero;
+
+    public int dodgeRange;
     public int HpRegen = 0;
     public int HealthMax = 400;
     public int Health;
 
     [SerializeField] private RectTransform hp_jbject;
     private int startHealth;
-    private void Start()
+
+    public void BirthHero()  //вместо Start
     {
         startHealth = Health;
         Health = HealthMax;
+        s_See.numberOfHero = numberOfHero;
+
         StartCoroutine(HpRegenTimer());
     }
 
     private void Update()
     {
-        ShowHpHero();
+        UpdateHpHero();
     }
 
     #region ShowHP
-    private void ShowHpHero()
+    private void UpdateHpHero()
     {
         startHealth = HealthMax;
 
@@ -75,7 +83,7 @@ public class S_Herohealth : MonoBehaviour
         if (rnd < dodgeRange)
             damage = 0;
         return damage;
-        
+
     }
     IEnumerator HpRegenTimer()
     {
@@ -84,10 +92,12 @@ public class S_Herohealth : MonoBehaviour
             if (Health < HealthMax)
             {
                 Health += HpRegen;
+
+                if (Health > HealthMax) Health = HealthMax;
             }
-           
+
             yield return new WaitForSeconds(1f);
         }
-        
+
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class S_Skill_Manager : MonoBehaviour
 {
-    [SerializeField] private S_Shot S_Shot;
+    [SerializeField] private S_Shot_forHero_1_Atilus S_Shot;
     public List<int> skill_lvl = new List<int> (10);
     
     
@@ -87,10 +87,10 @@ public class S_Skill_Manager : MonoBehaviour
                 S_Shot.numberOfBullet = 1;
                 break;
             case 2:
-                transform.GetComponent<S_Shot>().fireDamage += 3;
+                transform.GetComponent<S_Shot_forHero_1_Atilus>().fireDamage += 3;
                 break;
             case 3:
-                transform.GetComponent<S_Many_Shots>().bulletPrefab = transform.GetComponent<S_Shot>().bulletPrefab[1];
+                transform.GetComponent<S_Many_Shots>().bulletPrefab = transform.GetComponent<S_Shot_forHero_1_Atilus>().bulletPrefab[1];
                 break;
         }
     }
@@ -161,10 +161,10 @@ public class S_Skill_Manager : MonoBehaviour
         switch (skill_lvl[number])
         {
             case 1:
-                transform.GetComponent<S_Shot>().damage += 5;
+                transform.GetComponent<S_Shot_forHero_1_Atilus>().damage += 5;
                 break;
             case 2:
-                transform.GetComponent<S_Shot>().damage += 10;
+                transform.GetComponent<S_Shot_forHero_1_Atilus>().damage += 10;
                 break;
             case 3:
                // transform.GetComponent<S_Herohealth>().dodgeRange += 10;

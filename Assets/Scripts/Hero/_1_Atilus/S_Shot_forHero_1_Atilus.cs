@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class S_Shot : MonoBehaviour
+public class S_Shot_forHero_1_Atilus : MonoBehaviour
 {    
     public int amount_shots;
 

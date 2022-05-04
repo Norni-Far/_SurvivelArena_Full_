@@ -17,17 +17,33 @@ public class S_Subscribes : MonoBehaviour
         s_Lvl_Slider.event_lvlup += UI_Manager.LvlUpPanelActeve;
     }
 
-    public void Hero_Subscribes()
+    public void Hero_Subscribes(int numOfHero)
     {
+        // общее для героев 
         // для подбирания опыта героем
         heroObject.GetComponent<S_InformationAboutHero>().S_ExpirianceForHero.event_SendExpiriance += UI_Manager.GiveExpirienceFromHero;
-        // для показа хп на экране
+        // для показа панели смерти героя 
         heroObject.GetComponent<S_Herohealth>().event_deadHero += UI_Manager.TextDead;
 
+        // индивидуально для героев
+        switch (numOfHero)
+        {
+            case 0:
+                // добавляет новую способность 
+                s_Buy_Skill.event_skillForHero += heroObject.GetComponent<S_Skill_Manager>().ExploreSkill;
+                s_Buy_Skill.event_skillForHero += S_Skill_Panel_Active.GetComponent<S_skill_panel_active>().AddSkill;
+                break;
 
-        // добавляет новую способность 
-        s_Buy_Skill.event_skillForHero += heroObject.GetComponent<S_Skill_Manager>().ExploreSkill;
-        s_Buy_Skill.event_skillForHero += S_Skill_Panel_Active.GetComponent<S_skill_panel_active>().AddSkill;
+            case 1:
+                break;
+
+            case 2:
+                break;
+
+            case 3:
+                break;
+        }
+
     }
 
 

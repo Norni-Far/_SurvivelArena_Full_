@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 487519576174258472}
   - component: {fileID: 6801170974549865435}
   m_Layer: 0
-  m_Name: Hero_0_Atilus
+  m_Name: Hero_1_Atilus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,6 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc735f84024c44b4da0862269e569b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s_See: {fileID: 1419960892420051428}
+  numberOfHero: 0
   dodgeRange: 0
   HpRegen: 0
   HealthMax: 200
@@ -131,11 +133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7185900497191be40a553a390d7ebd82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  S_shot: {fileID: 1419960892420051353}
-  s_SpecialShot: {fileID: 9068065561950138685}
+  s_Shot_forHero_1_Atilus: {fileID: 1419960892420051353}
+  s_Shot_forHero_2_HHH: {fileID: 0}
   CircleRadiusSee: {fileID: 1419960893207618007}
   ISeeIts: []
-  chooseBulletPrefaab: 1
+  numberOfHero: 0
   Target: {fileID: 0}
   canShot: 0
   timeForReloadOfShot: 1
@@ -148,7 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1419960892420051430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4d6cacb79a4b244ba88baac744e6be, type: 3}
+  m_Script: {fileID: 11500000, guid: 295bf94be9a141542bbf9e1e712e0d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   amount_shots: 1
@@ -156,7 +158,7 @@ MonoBehaviour:
   bulletPrefab:
   - {fileID: 5573682387036392462, guid: b3b5dc0fcfa255d4d803feb4d47b9db6, type: 3}
   - {fileID: 3233904093860223433, guid: 7635498e180af8e4bb92b551a0d58ae7, type: 3}
-  - {fileID: 0}
+  - {fileID: 8678564591322682616, guid: 647d07f2b559c3144895a96d41bf4c9b, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   skill_active: 0000000000000000000000000000000000000000
@@ -712,7 +714,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.1
 --- !u!114 &1419960894113119416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,7 +727,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccc2deda49dfe14fabc631c6a74389c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expirienceCollider: {fileID: 0}
 --- !u!1 &1419960894146427964
 GameObject:
   m_ObjectHideFlags: 0

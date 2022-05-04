@@ -17,11 +17,6 @@ public class S_HeroMove : MonoBehaviour
     private float Move_y;
     private bool flip;
 
-    private void Start()
-    {
-
-    }
-
     private void FixedUpdate()
     {
         Move_x = HanglePoint.localPosition.normalized.x;
@@ -31,11 +26,11 @@ public class S_HeroMove : MonoBehaviour
         {
             rb.velocity = new Vector2(Move_x * VelocityOfHero, Move_y * VelocityOfHero);
             // HeroAnimator.SetBool("Run", true);
-            CheckAnim();
+            if (HeroAnimator) CheckAnim();
         }
         else
         {
-            OffAnim();
+            if (HeroAnimator) OffAnim();
             rb.velocity = Vector2.zero;
         }
 
@@ -54,11 +49,9 @@ public class S_HeroMove : MonoBehaviour
 
     private void Update()
     {
-        //gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.y / 100);
-        //gameObject.GetComponent<SpriteRenderer>().sortingOrder = Convert.ToInt32(Math.Ceiling(gameObject.transform.position.y) * -1);
-        //gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.y); // уровень с деревьями (заходить за них)
-        HeroAnimator.SetFloat("Hungle_X", Move_x);
-        HeroAnimator.SetFloat("Hungle_Y", Move_y);
+        // передача данных в аниматор
+        if (HeroAnimator) HeroAnimator.SetFloat("Hungle_X", Move_x);
+        if (HeroAnimator) HeroAnimator.SetFloat("Hungle_Y", Move_y);
     }
 
 

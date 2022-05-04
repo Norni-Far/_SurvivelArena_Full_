@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class S_HeroSee : MonoBehaviour
 {
-    [SerializeField] private S_Shot S_shot;
-    [SerializeField] private S_Meteor s_SpecialShot;
+    [SerializeField] private S_Shot_forHero_1_Atilus s_Shot_forHero_1_Atilus;
+    [SerializeField] private S_Shot_forHero_2_HHH s_Shot_forHero_2_HHH;
 
     [SerializeField] private CircleCollider2D CircleRadiusSee;
     [SerializeField] private List<GameObject> ISeeIts = new List<GameObject>();
 
-    [SerializeField] private int chooseBulletPrefaab;
+    public int numberOfHero;
+
     public GameObject Target;
     public bool canShot;
     public float timeForReloadOfShot;
@@ -20,6 +21,51 @@ public class S_HeroSee : MonoBehaviour
         StartCoroutine(TimerForFire());
     }
 
+    IEnumerator TimerForFire()
+    {
+        switch (numberOfHero)
+        {
+            case 0:
+                while (true)
+                {
+                    //проверна на возможность стрельбы
+                    yield return new WaitUntil(() => canShot);
+
+                    //выстрел
+                    if (Target != null)
+                    {
+                        // обычная стрельба 
+                        s_Shot_forHero_1_Atilus.Shot(Target.transform);
+
+                        // особая стрельба (работает отдельно) 
+                    }
+
+                    // перезарядка
+                    yield return new WaitForSeconds(timeForReloadOfShot);
+                }
+
+            case 1:
+                while (true)
+                {
+                    //проверна на возможность стрельбы
+                    yield return new WaitUntil(() => canShot);
+
+                    //выстрел
+                    if (Target != null)
+                    {
+                        // обычная стрельба 
+                        s_Shot_forHero_2_HHH.Shot(Target.transform);
+
+                        // особая стрельба (работает отдельно) 
+                    }
+
+                    // перезарядка
+                    yield return new WaitForSeconds(timeForReloadOfShot);
+                }
+        }
+    }
+
+    #region Поиск и обновление списка врагов
 
     IEnumerator UpdateListOfEnemy()
     {
@@ -61,27 +107,7 @@ public class S_HeroSee : MonoBehaviour
         }
     }
 
-    IEnumerator TimerForFire()
-    {
-        while (true)
-        {
-            yield return new WaitUntil(() => canShot);
-            if (Target != null)
-
-                // обычная стрельба 
-                S_shot.Shot(Target.transform);
-
-            // особая стрельба (работает отдельно) 
-
-
-            yield return new WaitForSeconds(timeForReloadOfShot);
-        }
-
-
-    }
-
     private void RemoveEnemyFromList(GameObject Enemy) => ISeeIts.Remove(Enemy);
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -106,13 +132,5 @@ public class S_HeroSee : MonoBehaviour
         }
     }
 
-    public void menu()
-    {
-
-    }
-
-    public void restart()
-    {
-
-    }
+    #endregion
 }

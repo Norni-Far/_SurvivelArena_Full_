@@ -39,7 +39,7 @@ public class S_Many_Shots : MonoBehaviour
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             inst.transform.Rotate(inst.transform.rotation.x, inst.transform.rotation.y, rotZ + (rec));
             if (inst.TryGetComponent(out S_FireForEnemy_SubtractHP fire))
-                inst.GetComponent<S_FireForEnemy_SubtractHP>().fireDamage = transform.GetComponent<S_Shot>().fireDamage;
+                inst.GetComponent<S_FireForEnemy_SubtractHP>().fireDamage = transform.GetComponent<S_Shot_forHero_1_Atilus>().fireDamage;
 
         }
 

@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class S_Loading_from_scene : MonoBehaviour
 {
-    [SerializeField] private Game_Manager GameManager;
-
-
-    private void OnEnable()
+    public int LoadFromScene()
     {
-        GameManager.NumberHero = PlayerPrefs.GetInt("hero_namber");
+        return PlayerPrefs.GetInt("hero_namber");
     }
 }

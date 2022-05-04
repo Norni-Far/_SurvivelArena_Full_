@@ -349,6 +349,8 @@ Transform:
   - {fileID: 427067854}
   - {fileID: 1884880172}
   - {fileID: 1118502733}
+  - {fileID: 1434078626}
+  - {fileID: 1145123463}
   m_Father: {fileID: 280039306}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -369,14 +371,15 @@ MonoBehaviour:
   SpawnEnemy: {fileID: 1374472689}
   S_Subscribes: {fileID: 1884880173}
   S_showHPPlaeyr: {fileID: 989487298}
+  S_LoadFromScene: {fileID: 1434078627}
   ChosenCharacter:
   - {fileID: 1419960892420051430, guid: 0280f4f8f90c50c42afc3b138cf66a41, type: 3}
-  - {fileID: 0}
+  - {fileID: 3093628665353453695, guid: d9310112133954b47b25fec0a9db7d0b, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   hanglePointForHero: {fileID: 1397667637115571200}
-  NumberHero: 0
+  NumberHero: 1
 --- !u!1 &3835940
 GameObject:
   m_ObjectHideFlags: 0
@@ -14844,8 +14847,6 @@ Transform:
   - {fileID: 261899431}
   - {fileID: 3755990}
   - {fileID: 774362394}
-  - {fileID: 1434078626}
-  - {fileID: 1145123463}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -58288,12 +58289,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145123462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 280039306}
+  m_Father: {fileID: 3755990}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1145123464
@@ -72956,12 +72957,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434078625}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 280039306}
+  m_Father: {fileID: 3755990}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1434078627
@@ -72976,7 +72977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab0cc83523a505458549a6578f0e909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameManager: {fileID: 3755991}
 --- !u!1 &1434845398
 GameObject:
   m_ObjectHideFlags: 0

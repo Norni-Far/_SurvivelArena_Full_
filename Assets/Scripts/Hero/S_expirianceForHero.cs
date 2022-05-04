@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class S_expirianceForHero : MonoBehaviour
 {
-    [SerializeField] private Collider2D expirienceCollider;
-
     public delegate void Delegats(int exp);
     public event Delegats event_SendExpiriance;
 
