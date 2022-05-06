@@ -344,10 +344,11 @@ GameObject:
   - component: {fileID: 3093628665353453694}
   - component: {fileID: 3093628665353453569}
   - component: {fileID: 3093628665353453692}
-  - component: {fileID: 4279703710534357356}
   - component: {fileID: 1110538946578534504}
   - component: {fileID: 7437955362151653954}
   - component: {fileID: 3531048277650849562}
+  - component: {fileID: -4045950447916578447}
+  - component: {fileID: -163352908078428402}
   m_Layer: 0
   m_Name: Hero_2_&&&
   m_TagString: Untagged
@@ -424,13 +425,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc735f84024c44b4da0862269e569b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s_See: {fileID: 4279703710534357356}
+  s_See: {fileID: 0}
   numberOfHero: 0
   dodgeRange: 0
   HpRegen: 0
   HealthMax: 200
   Health: 200
   hp_jbject: {fileID: 3093628664923599543}
+  enemyObject: {fileID: 0}
 --- !u!114 &3093628665353453692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,26 +450,6 @@ MonoBehaviour:
   HanglePoint: {fileID: 0}
   rb: {fileID: 3093628665353453571}
   VelocityOfHero: 1.5
---- !u!114 &4279703710534357356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3093628665353453695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7185900497191be40a553a390d7ebd82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  s_Shot_forHero_1_Atilus: {fileID: 0}
-  s_Shot_forHero_2_HHH: {fileID: 3531048277650849562}
-  CircleRadiusSee: {fileID: 3093628665353453694}
-  ISeeIts: []
-  numberOfHero: 0
-  Target: {fileID: 0}
-  canShot: 0
-  timeForReloadOfShot: 1
 --- !u!114 &1110538946578534504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,6 +487,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957a3571a3675de4c86fed977da4322e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4045950447916578447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093628665353453695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b863d69c22a45448f9e100d514224a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  S_Shot: {fileID: 0}
+  skill_lvl: 
+--- !u!114 &-163352908078428402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093628665353453695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190dc6666628017419af9599b6088528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  S_Infect_For_Enemy: {fileID: 0}
+  damage: 15
+  timePerSeconds: 1
 --- !u!1 &3093628665758379316
 GameObject:
   m_ObjectHideFlags: 0

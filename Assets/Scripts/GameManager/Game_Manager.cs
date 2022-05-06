@@ -27,7 +27,7 @@ public class Game_Manager : MonoBehaviour
         //создание героя 
         Character = Instantiate(ChosenCharacter[NumberHero]);
         S_Subscribes.heroObject = Character;
-
+        Character.GetComponent<S_Herohealth>().numberOfHero = NumberHero;
         HeroIsCreate();
 
 
