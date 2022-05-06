@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_Skill_Manager : MonoBehaviour
+public class S_Skill_Manager_Atilus : MonoBehaviour
 {
     [SerializeField] private S_Shot_forHero_1_Atilus S_Shot;
     public List<int> skill_lvl = new List<int> (10);
