@@ -5,8 +5,7 @@ using UnityEngine;
 public class S_Herohealth : MonoBehaviour
 {
     //скрипты 
-    [SerializeField] private S_HeroSee s_See;
-
+    private S_HeroSee s_See;
     public delegate void delegats();
     public event delegats event_deadHero;
 
@@ -19,12 +18,24 @@ public class S_Herohealth : MonoBehaviour
 
     [SerializeField] private RectTransform hp_jbject;
     private int startHealth;
+    public GameObject enemyObject;
 
     public void BirthHero()  //вместо Start
     {
+        switch (numberOfHero)
+        {
+            case 0:
+                s_See = transform.GetComponent<S_HeroSee>();
+                s_See.numberOfHero = numberOfHero;
+                break;
+
+            case 1:
+                break;
+        }    
+       
         startHealth = Health;
         Health = HealthMax;
-        s_See.numberOfHero = numberOfHero;
+        
 
         StartCoroutine(HpRegenTimer());
     }
@@ -58,6 +69,7 @@ public class S_Herohealth : MonoBehaviour
     /// <param name="Enemy">Кто наносит урон</param>
     public void SetDamage(int Damage, GameObject Enemy) // принимает | урон | кто наносит урон |
     {
+        enemyObject = Enemy;
         // шанс увернуться от получения урона 
         if (Enemy.TryGetComponent(out S_SendDamageForHero_NearFight S_nearFight)) //ближники 
         {

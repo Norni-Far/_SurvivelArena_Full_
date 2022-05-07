@@ -23,14 +23,13 @@ public class Game_Manager : MonoBehaviour
 
     public void StartForBtn()
     {
+
         // загрузка номмера героя
         //NumberHero = S_LoadFromScene.LoadFromScene();
 
-        //создание героя 
-        Character = Instantiate(ChosenCharacter[NumberHero], gameObject.transform);
-        Character.transform.parent = null;
+        Character = Instantiate(ChosenCharacter[NumberHero]);
         S_Subscribes.heroObject = Character;
-
+        Character.GetComponent<S_Herohealth>().numberOfHero = NumberHero;
         HeroIsCreate();
 
 

@@ -5,10 +5,10 @@ using UnityEngine;
 public class S_Subscribes : MonoBehaviour
 {
     [SerializeField] private S_Buy_Skill s_Buy_Skill;
-    [SerializeField] private GameObject S_Skill_Panel_Active;
+    [SerializeField] private GameObject [] S_Skill_Panel_Active;
     [SerializeField] private S_Lvl_Slider s_Lvl_Slider;
     [SerializeField] private UI_Manager UI_Manager;
-
+    private int numberHero;
 
     [HideInInspector] public GameObject heroObject;
 
@@ -30,11 +30,13 @@ public class S_Subscribes : MonoBehaviour
         {
             case 0:
                 // добавляет новую способность 
-                s_Buy_Skill.event_skillForHero += heroObject.GetComponent<S_Skill_Manager>().ExploreSkill;
-                s_Buy_Skill.event_skillForHero += S_Skill_Panel_Active.GetComponent<S_skill_panel_active>().AddSkill;
+                s_Buy_Skill.event_skillForHero += heroObject.GetComponent<S_Skill_Manager_Atilus>().ExploreSkill;
+                s_Buy_Skill.event_skillForHero += S_Skill_Panel_Active[numberHero].GetComponent<S_skill_panel_active>().AddSkill;
                 break;
 
             case 1:
+                s_Buy_Skill.event_skillForHero += heroObject.GetComponent<S_Skill_Manager_Toxic>().ExploreSkill;
+                s_Buy_Skill.event_skillForHero += S_Skill_Panel_Active[numberHero].GetComponent<S_skill_panel_active>().AddSkill;
                 break;
 
             case 2:

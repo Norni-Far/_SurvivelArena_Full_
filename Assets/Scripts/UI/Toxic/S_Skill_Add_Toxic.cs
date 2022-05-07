@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class S_Skill_Add : MonoBehaviour
+public class S_Skill_Add_Toxic : MonoBehaviour
 {
     [SerializeField] GameObject content_skills;
-    [SerializeField] private List<GameObject> skill_Obj = new List<GameObject> (2);
+    [SerializeField] private List<GameObject> skill_Obj = new List<GameObject>(2);
     [SerializeField] public int[] skill_lvl = new int[10]; //для того, чтобы знать какой лвл прокачки у скила
 
     private void OnEnable()
     {
-        
+
         RandomSkill();
     }
 
@@ -23,16 +23,16 @@ public class S_Skill_Add : MonoBehaviour
             skill_Obj[number].transform.SetAsFirstSibling();
 
         }
-       
+
         for (int i = 0; i < skill_Obj.Count; i++)
         {
             switch (i)
             {
                 case 0:
-                    skill1(skill_Obj[i],i);
+                    skill1(skill_Obj[i], i);
                     break;
                 case 1:
-                    skill2(skill_Obj[i],i);
+                    skill2(skill_Obj[i], i);
                     break;
                 case 2:
                     skill3(skill_Obj[i], i);
@@ -53,18 +53,18 @@ public class S_Skill_Add : MonoBehaviour
         }
     }
 
-    private void skill1(GameObject panel,int number)
+    private void skill1(GameObject panel, int number)
     {
         switch (skill_lvl[number])
         {
             case 0:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Дает один дополнительный снаряд.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Вызывает токсичный дождь.";
                 break;
             case 1:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Дает один дополнительный снаряд. Урон увеличивается на 5.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон дождя на 3.";
                 break;
             case 2:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Дает один дополнительный снаряд. Скоросто вылета дополнительных снарядов увеличена.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон дождя на 10.";
                 break;
         }
     }
@@ -74,16 +74,13 @@ public class S_Skill_Add : MonoBehaviour
         switch (skill_lvl[number])
         {
             case 0:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Стреляет сразу тремя снарядами.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Создает токсичное облако.";
                 break;
             case 1:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон дополнительных снарядов на 5.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон облака на 4.";
                 break;
             case 2:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон дополнительных снарядов на 10.";
-                break;
-            case 3:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Дает еще два дополнительных снаряда.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон облака на 12.";
                 break;
         }
     }
@@ -93,17 +90,15 @@ public class S_Skill_Add : MonoBehaviour
         switch (skill_lvl[number])
         {
             case 0:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Добовляет к основному заряду огненный эффект.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Добовляет к основному заряду ядовитый эффект.";
                 break;
             case 1:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон от поджога на 3.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон от ядовитых атак на 5.";
                 break;
             case 2:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Добавляет огненный поджег дополнительным снарядам.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон от ядовитых атак на 20.";
                 break;
-            case 3:
-             //   panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Подожженые враги наносят урон ближайшим врагам.";
-                break;
+
         }
     }
 

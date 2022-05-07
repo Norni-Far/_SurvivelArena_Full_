@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3093628664130317733}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2864, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.0538, y: 0.5716, z: 0}
+  m_LocalScale: {x: 0.093879625, y: 0.07069008, z: 0.5909781}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1047251442542088878}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f3d54248a9c827f4ca07d3766ab56ede, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -344,10 +344,11 @@ GameObject:
   - component: {fileID: 3093628665353453694}
   - component: {fileID: 3093628665353453569}
   - component: {fileID: 3093628665353453692}
-  - component: {fileID: 4279703710534357356}
   - component: {fileID: 1110538946578534504}
   - component: {fileID: 7437955362151653954}
   - component: {fileID: 3531048277650849562}
+  - component: {fileID: -4045950447916578447}
+  - component: {fileID: -163352908078428402}
   m_Layer: 0
   m_Name: Hero_2_Toksic
   m_TagString: Untagged
@@ -362,7 +363,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3093628665353453695}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.25, y: -0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -424,13 +425,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc735f84024c44b4da0862269e569b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s_See: {fileID: 4279703710534357356}
+  s_See: {fileID: 0}
   numberOfHero: 0
   dodgeRange: 0
   HpRegen: 0
   HealthMax: 200
   Health: 200
   hp_jbject: {fileID: 3093628664923599543}
+  enemyObject: {fileID: 0}
 --- !u!114 &3093628665353453692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,26 +450,6 @@ MonoBehaviour:
   HanglePoint: {fileID: 0}
   rb: {fileID: 3093628665353453571}
   VelocityOfHero: 1.5
---- !u!114 &4279703710534357356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3093628665353453695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7185900497191be40a553a390d7ebd82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  s_Shot_forHero_1_Atilus: {fileID: 0}
-  s_Shot_forHero_2_HHH: {fileID: 3531048277650849562}
-  CircleRadiusSee: {fileID: 3093628665353453694}
-  ISeeIts: []
-  numberOfHero: 0
-  Target: {fileID: 0}
-  canShot: 0
-  timeForReloadOfShot: 1
 --- !u!114 &1110538946578534504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,6 +487,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957a3571a3675de4c86fed977da4322e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4045950447916578447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093628665353453695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b863d69c22a45448f9e100d514224a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  S_Shot: {fileID: 0}
+  skill_lvl: 
+--- !u!114 &-163352908078428402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093628665353453695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190dc6666628017419af9599b6088528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  S_Infect_For_Enemy: {fileID: 0}
+  damage: 15
+  timePerSeconds: 1
 --- !u!1 &3093628665758379316
 GameObject:
   m_ObjectHideFlags: 0
