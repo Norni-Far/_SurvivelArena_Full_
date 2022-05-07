@@ -6,6 +6,7 @@ public class S_HeroSee : MonoBehaviour
 {
     [SerializeField] private S_Shot_forHero_1_Atilus s_Shot_forHero_1_Atilus;
     [SerializeField] private S_Shot_forHero_2_HHH s_Shot_forHero_2_HHH;
+    [SerializeField] private S_AttackHero_Injener s_AttackHero_Injener;
 
     [SerializeField] private CircleCollider2D CircleRadiusSee;
     [SerializeField] private List<GameObject> ISeeIts = new List<GameObject>();
@@ -55,6 +56,25 @@ public class S_HeroSee : MonoBehaviour
                     {
                         // обычная стрельба 
                         s_Shot_forHero_2_HHH.Shot(Target.transform);
+
+                        // особая стрельба (работает отдельно) 
+                    }
+
+                    // перезарядка
+                    yield return new WaitForSeconds(timeForReloadOfShot);
+                }
+            
+            case 2:
+                while (true)
+                {
+                    //проверна на возможность стрельбы
+                    yield return new WaitUntil(() => canShot);
+
+                    //выстрел
+                    if (Target != null)
+                    {
+                        // обычная стрельба 
+                        s_AttackHero_Injener.Shot(ISeeIts);
 
                         // особая стрельба (работает отдельно) 
                     }

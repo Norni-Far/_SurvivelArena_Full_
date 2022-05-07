@@ -30,6 +30,7 @@ public class Game_Manager : MonoBehaviour
         Character = Instantiate(ChosenCharacter[NumberHero]);
         S_Subscribes.heroObject = Character;
         Character.GetComponent<S_Herohealth>().numberOfHero = NumberHero;
+        Character.GetComponent<S_HeroSee>().numberOfHero = NumberHero;
         HeroIsCreate();
 
 
@@ -40,7 +41,8 @@ public class Game_Manager : MonoBehaviour
         //Старт спавна врагов
         SpawnEnemy.StartSpawnerEnemy(Character);
 
-
+        // Старт UI
+        UI_Manager.StartMain(NumberHero);
     }
 
     private void HeroIsCreate()

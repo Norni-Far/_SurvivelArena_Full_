@@ -5,14 +5,14 @@ public class UI_Manager : MonoBehaviour
 {
     [SerializeField] private S_Lvl_Slider S_Lvl_Slider;
     [SerializeField] private S_Text_Dead S_Text_Dead;
-    [SerializeField] private GameObject [] LvlUpPanel;
+    [SerializeField] private GameObject[] LvlUpPanel;
     [SerializeField] private S_WorldOfTime WorldOfTime;
     [SerializeField] private Game_Manager game_Manager;
     private int numberHero;
 
-    private void Start()
+    public void StartMain(int number)
     {
-        numberHero = game_Manager.NumberHero;
+        numberHero = number;
     }
     public void GiveExpirienceFromHero(int exp)
     {
