@@ -5,7 +5,13 @@ using UnityEngine;
 public class S_Cloud_damage : MonoBehaviour
 {
     public int CloudDamagePerSeconds = 1;
+    public float timeLife;
 
+
+    private void Start()
+    {
+        Destroy(gameObject, timeLife);
+    }
     private void OnTriggerEnter2D(Collider2D enemy)
     {
         if (enemy.transform.TryGetComponent(out S_Hp_enemy hp_enemy))

@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class S_ToxinForEnemy : MonoBehaviour
 {
-    public int damage = 1;
-    public float timePerSeconds = 1;
+    public int damage;
+    public float timePerSeconds;
     private S_Hp_enemy hp_Enemy;
+    public GameObject toxin;
     private void Start()
     {
         hp_Enemy = transform.GetComponent<S_Hp_enemy>();
         timePerSeconds = 1;
         StartCoroutine(damageForEnemy());
+        Destroy(this, 2.1f);
         
     }
 
@@ -19,7 +21,10 @@ public class S_ToxinForEnemy : MonoBehaviour
     {
         while (true)
         {
-            hp_Enemy.hit(damage);
+            if (toxin != null)
+                hp_Enemy.hit(damage);
+            else
+                Destroy(transform.GetComponent<S_ToxinForEnemy>());
             yield return new WaitForSeconds(timePerSeconds);
         }
        

@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2853736552102948000}
   - component: {fileID: 353191861136704540}
-  - component: {fileID: 339723983}
   - component: {fileID: 2983038685157453086}
   - component: {fileID: 4125564493639094099}
+  - component: {fileID: 8421008207153602758}
   m_Layer: 0
-  m_Name: Square
+  m_Name: "\u0414\u043E\u0436\u0434\u044C \u0441 \u043A\u043E\u043B\u043B\u0430\u0439\u0434\u0435\u0440\u043E\u043C"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2266631735016053788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5881, y: 0.3244, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.9166775, y: 13.678164, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -88,19 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &339723983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2266631735016053788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a8b79c6e2e463d40a16967eb78d00dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toxinDamagePerSeconds: 1
 --- !u!50 &2983038685157453086
 Rigidbody2D:
   serializedVersion: 4
@@ -109,7 +96,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2266631735016053788}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -148,6 +135,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8421008207153602758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2266631735016053788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8b79c6e2e463d40a16967eb78d00dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toxinDamagePerSeconds: 1
+  couldown: 100
 --- !u!1001 &8836892464708947288
 PrefabInstance:
   m_ObjectHideFlags: 0
