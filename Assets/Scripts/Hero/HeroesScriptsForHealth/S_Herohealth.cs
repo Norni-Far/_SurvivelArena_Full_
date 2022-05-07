@@ -10,7 +10,7 @@ public class S_Herohealth : MonoBehaviour
     public delegate void delegats();
     public event delegats event_deadHero;
 
-    public int numberOfHero;
+    [HideInInspector] public int numberOfHero;
 
     public int dodgeRange;
     public int HpRegen = 0;

@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class S_SendDamageForHero_NearFight : MonoBehaviour
 {
-    public int Damage;
+    public int damage;
+    public GameObject enemy;
 
     public void SendDamageForHero()
     {
-        transform.parent.parent.GetComponent<S_Herohealth>().SetDamage(Damage, gameObject);
+        transform.parent.parent.GetComponent<S_Herohealth>().SetDamage(damage, enemy);
     }
 }

@@ -11,7 +11,7 @@ public class Game_Manager : MonoBehaviour
     [SerializeField] private S_Subscribes S_Subscribes;
     [SerializeField] private S_ShowHeroHealth_onCanvas S_showHPPlaeyr;
     [SerializeField] private S_Loading_from_scene S_LoadFromScene;
- 
+
     // Герой 
     [SerializeField] private GameObject[] ChosenCharacter;
     [SerializeField] private RectTransform hanglePointForHero;
@@ -24,7 +24,7 @@ public class Game_Manager : MonoBehaviour
     public void StartForBtn()
     {
         // загрузка номмера героя
-        NumberHero = 1; //S_LoadFromScene.LoadFromScene();
+        //NumberHero = S_LoadFromScene.LoadFromScene();
 
         //создание героя 
         Character = Instantiate(ChosenCharacter[NumberHero], gameObject.transform);

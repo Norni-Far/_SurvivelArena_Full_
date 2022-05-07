@@ -39,6 +39,7 @@ public class S_FireForFarFight : MonoBehaviour
 
             GameObject inst = Instantiate(prefabArrow, transform.position, transform.rotation);
             inst.GetComponent<S_ArcherCollision>().damage = damageForArrow;
+            inst.GetComponent<S_ArcherCollision>().Enemy = gameObject;
 
             Vector3 difference = heroBody.position - inst.transform.position;
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;

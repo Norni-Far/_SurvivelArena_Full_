@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 7437955362151653954}
   - component: {fileID: 3531048277650849562}
   m_Layer: 0
-  m_Name: Hero_2_&&&
+  m_Name: Hero_2_Toksic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

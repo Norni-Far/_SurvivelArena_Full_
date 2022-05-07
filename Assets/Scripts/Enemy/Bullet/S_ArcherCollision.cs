@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class S_ArcherCollision : MonoBehaviour
 {
+
+    public GameObject Enemy;
     [SerializeField] private S_bulletMoveTowardsTarget S_moveArrow;
 
     [HideInInspector] public int damage;
@@ -16,7 +18,7 @@ public class S_ArcherCollision : MonoBehaviour
             gameObject.transform.parent = S_heroBody.gameObject.transform;
 
             // отнимание жизней
-            S_heroBody.transform.parent.parent.GetComponent<S_Herohealth>().SetDamage(damage, gameObject);
+            S_heroBody.transform.parent.parent.GetComponent<S_Herohealth>().SetDamage(damage, Enemy);
             S_moveArrow.enabled = false;
 
             Destroy(this);
