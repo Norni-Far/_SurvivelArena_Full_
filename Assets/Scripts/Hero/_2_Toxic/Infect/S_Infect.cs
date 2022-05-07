@@ -3,9 +3,10 @@ using UnityEngine;
 public class S_Infect : MonoBehaviour
 {
     private S_Herohealth herohealth;
-    public GameObject enemy;
+    private GameObject enemy;
     public int damage;
     public float timePerSeconds;
+    [SerializeField] private GameObject infectPrefab;
 
     private void Start()
     {
@@ -21,7 +22,8 @@ public class S_Infect : MonoBehaviour
                 enemy.AddComponent<S_Infect_for_enemy>();
                 enemy.GetComponent<S_Infect_for_enemy>().damage = damage;
                 enemy.GetComponent<S_Infect_for_enemy>().timePerSeconds = timePerSeconds;
-
+                GameObject cloud = Instantiate(infectPrefab, enemy.transform);
+                cloud.transform.localPosition = new Vector2(0,0);
             }
 
 

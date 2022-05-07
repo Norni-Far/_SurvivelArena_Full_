@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   S_Shot: {fileID: 0}
-  skill_lvl: 
+  skill_lvl: 00000000000000000000000000000000000000000000000000000000
 --- !u!114 &-163352908078428402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,9 +513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190dc6666628017419af9599b6088528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  damage: 15
-  timePerSeconds: 1
+  damage: 5
+  timePerSeconds: 2
+  infectPrefab: {fileID: 1367739294567075389, guid: 80d0b542f1a3b834f8c1d13092b44665, type: 3}
 --- !u!114 &8325131128336551096
 MonoBehaviour:
   m_ObjectHideFlags: 0

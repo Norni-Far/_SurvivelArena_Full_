@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class S_Skill_Manager_Toxic : MonoBehaviour
 {
-    [SerializeField] private S_Shot_forHero_1_Atilus S_Shot;
     public List<int> skill_lvl = new List<int>(10);
 
 
@@ -46,16 +45,13 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
         switch (skill_lvl[number])
         {
             case 1:
-                S_Shot.skill_active[0] = true;
-                S_Shot.amount_shots++; //несколько выстрелов подряд
+
                 break;
             case 2:
-                S_Shot.amount_shots++;
-                S_Shot.damage += 5;
+
                 break;
             case 3:
-                S_Shot.amount_shots++;
-                S_Shot.pauseShot = S_Shot.pauseShot * 0.7f;
+
                 break;
         }
     }
