@@ -6,6 +6,7 @@ public class S_Cloud_damage : MonoBehaviour
 {
     public int CloudDamagePerSeconds = 1;
     public float timeLife;
+    public int damage;
 
 
     private void Start()
@@ -17,6 +18,8 @@ public class S_Cloud_damage : MonoBehaviour
         if (enemy.transform.TryGetComponent(out S_Hp_enemy hp_enemy))
         {
             enemy.gameObject.AddComponent<S_ToxinForEnemy>();
+            enemy.GetComponent<S_ToxinForEnemy>().toxin = gameObject;
+            enemy.GetComponent<S_ToxinForEnemy>().damage = damage;
         }
 
 

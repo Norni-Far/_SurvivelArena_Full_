@@ -15,20 +15,9 @@ public class S_Toxin : MonoBehaviour
     {
         if(enemy.transform.TryGetComponent(out S_Hp_enemy hp_enemy))
         {
-                enemy.gameObject.AddComponent<S_ToxinForEnemy>();
+            enemy.gameObject.AddComponent<S_ToxinForEnemy>();
             enemy.GetComponent<S_ToxinForEnemy>().damage = toxinDamagePerSeconds;
             enemy.GetComponent<S_ToxinForEnemy>().toxin = gameObject;
-        }
-            
-        
-    }
-
-    private void OnTriggerExit2D(Collider2D enemy)
-    {
-        if (enemy.transform.TryGetComponent(out S_Hp_enemy hp_enemy) && !enemy.transform.TryGetComponent(out S_ToxinForEnemy toxinForEnemy))
-        {
-
-            Destroy(enemy.gameObject.GetComponent<S_ToxinForEnemy>());
         }
     }
 }

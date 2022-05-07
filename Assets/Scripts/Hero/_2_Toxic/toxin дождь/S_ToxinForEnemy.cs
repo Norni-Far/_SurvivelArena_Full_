@@ -13,7 +13,6 @@ public class S_ToxinForEnemy : MonoBehaviour
         hp_Enemy = transform.GetComponent<S_Hp_enemy>();
         timePerSeconds = 1;
         StartCoroutine(damageForEnemy());
-        Destroy(this, 2.1f);
         
     }
 

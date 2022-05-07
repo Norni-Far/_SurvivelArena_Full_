@@ -77,10 +77,16 @@ public class S_Skill_Add_Toxic : MonoBehaviour
                 panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Создает токсичное облако.";
                 break;
             case 1:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон облака на 4.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон облака на 5.";
                 break;
             case 2:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон облака на 12.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон облака на 15.";
+                break;
+            case 3:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Уменьшает в размерах, но длится дольше.";
+                break;
+            case 4:
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Делает облако постоянной способностью.";
                 break;
         }
     }
@@ -90,13 +96,13 @@ public class S_Skill_Add_Toxic : MonoBehaviour
         switch (skill_lvl[number])
         {
             case 0:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Добовляет к основному заряду ядовитый эффект.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Для одного яд, для другого лекарсто. Востанавливает здоровье от убийств.";
                 break;
             case 1:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон от ядовитых атак на 5.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Востанавливает на 5 здоровья больше.";
                 break;
             case 2:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон от ядовитых атак на 20.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Востанавливает на 10 здоровья больше.";
                 break;
 
         }

@@ -5,9 +5,14 @@ using UnityEngine;
 public class S_Skill_Manager_Toxic : MonoBehaviour
 {
     public List<int> skill_lvl = new List<int>(10);
+    private S_Toxin_spawn  S_Toxin_spawn;
+    private S_Cloud_Toxic S_Cloud_Toxic;
 
-
-
+    private void Start()
+    {
+        S_Toxin_spawn = GetComponent<S_Toxin_spawn>();
+        S_Cloud_Toxic = GetComponent<S_Cloud_Toxic>();
+    }
     public void ExploreSkill(int number)
     {
 
@@ -19,7 +24,7 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
                 ExploreSkill_1(number);
                 break;
             case 1:
-              //  ExploreSkill_2(number);
+                ExploreSkill_2(number);
                 break;
             case 2:
                 //ExploreSkill_3(number);
@@ -40,18 +45,42 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
     }
 
 
-    private void ExploreSkill_1(int number)
+    private void ExploreSkill_1(int number) // toxin токсиновый дождь
     {
         switch (skill_lvl[number])
         {
             case 1:
-
+                S_Toxin_spawn.enabled = true;
                 break;
             case 2:
-
+                S_Toxin_spawn.damage += 3;
                 break;
             case 3:
+                S_Toxin_spawn.damage += 10;
+                break;
+        }
+    }
 
+    private void ExploreSkill_2(int number) // cloud токсиновое облако
+    {
+        switch (skill_lvl[number])
+        {
+            case 1:
+                S_Cloud_Toxic.enabled = true;
+                break;
+            case 2:
+                S_Cloud_Toxic.damage += 5;
+                break;
+            case 3:
+                S_Cloud_Toxic.damage += 15;
+                break;
+            case 4:
+                S_Cloud_Toxic.scale = 0.7f;
+                S_Cloud_Toxic.couldown -= 5;
+                break;
+            case 5:
+                S_Cloud_Toxic.couldown = 2000000f; // делает облако бесконечным
+                S_Cloud_Toxic.timeLife = 2000000f;
                 break;
         }
     }
