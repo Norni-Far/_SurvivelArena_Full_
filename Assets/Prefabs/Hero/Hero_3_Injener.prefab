@@ -370,8 +370,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab_SimplleTuch: {fileID: 375123529971480134, guid: 924639dc763654b4ba01d2782c20ceea, type: 3}
-  distanceOfAttck: 0
-  simpleDamage: 5
+  distanceOfAttck: 1.5
+  simpleDamage: 0
   countOfSimpleTuch: 2
 --- !u!1 &417426998872890628
 GameObject:

@@ -349,6 +349,7 @@ GameObject:
   - component: {fileID: 3531048277650849562}
   - component: {fileID: -4045950447916578447}
   - component: {fileID: -163352908078428402}
+  - component: {fileID: 8325131128336551096}
   m_Layer: 0
   m_Name: Hero_2_Toksic
   m_TagString: Untagged
@@ -425,7 +426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc735f84024c44b4da0862269e569b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s_See: {fileID: 0}
   numberOfHero: 0
   dodgeRange: 0
   HpRegen: 0
@@ -513,9 +513,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190dc6666628017419af9599b6088528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  S_Infect_For_Enemy: {fileID: 0}
+  enemy: {fileID: 0}
   damage: 15
   timePerSeconds: 1
+--- !u!114 &8325131128336551096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093628665353453695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7185900497191be40a553a390d7ebd82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s_Shot_forHero_1_Atilus: {fileID: 0}
+  s_Shot_forHero_2_HHH: {fileID: 3531048277650849562}
+  s_AttackHero_Injener: {fileID: 0}
+  CircleRadiusSee: {fileID: 0}
+  ISeeIts: []
+  numberOfHero: 0
+  Target: {fileID: 0}
+  canShot: 0
+  timeForReloadOfShot: 1
 --- !u!1 &3093628665758379316
 GameObject:
   m_ObjectHideFlags: 0

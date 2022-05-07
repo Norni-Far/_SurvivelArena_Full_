@@ -7438,7 +7438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &127327621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14612,7 +14612,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d432124e7f8b2b4f904159ec54cdf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skills_panel: []
+  skills_panel:
+  - {fileID: 716787243}
+  - {fileID: 76894153}
+  - {fileID: 1621430059}
   skill_lvl: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &263503378
 GameObject:
@@ -108007,9 +108010,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s_Buy_Skill: {fileID: 261899433}
-  S_Skill_Panel_Active: []
+  S_Skill_Panel_Active:
+  - {fileID: 669929665}
+  - {fileID: 634929658}
+  - {fileID: 2110481846}
   s_Lvl_Slider: {fileID: 978459437}
   UI_Manager: {fileID: 261899432}
+  numberHero: 0
   heroObject: {fileID: 0}
 --- !u!1 &1886813608
 GameObject:

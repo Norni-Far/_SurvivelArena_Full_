@@ -19,7 +19,7 @@ public class Game_Manager : MonoBehaviour
 
     //[SerializeField] private GameObject expirianceHeroObj; // объект опыта от героя
 
-    public int NumberHero;
+    [Range(min: 0, max: 2)] public int NumberHero;
 
     public void StartForBtn()
     {

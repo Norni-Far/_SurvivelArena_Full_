@@ -31,11 +31,11 @@ public class S_Herohealth : MonoBehaviour
 
             case 1:
                 break;
-        }    
-       
+        }
+
         startHealth = Health;
         Health = HealthMax;
-        
+
 
         StartCoroutine(HpRegenTimer());
     }
@@ -62,24 +62,18 @@ public class S_Herohealth : MonoBehaviour
     }
     #endregion
 
+    #region Приём урона
+
     /// <summary>
-    /// Получение урона героем
+    /// Получение урона героем и приём того кто ударил
     /// </summary>
     /// <param name="Damage">Наносимый Урон</param>
     /// <param name="Enemy">Кто наносит урон</param>
     public void SetDamage(int Damage, GameObject Enemy) // принимает | урон | кто наносит урон |
     {
         enemyObject = Enemy;
-        // шанс увернуться от получения урона 
-        if (Enemy.TryGetComponent(out S_SendDamageForHero_NearFight S_nearFight)) //ближники 
-        {
 
-        }
-
-        if (Enemy.TryGetComponent(out S_ArcherCollision S_arrow)) // дальники 
-        {
-            //return;
-        }
+        // ecли Токсик, то посылаешь "enemyObject" в другой скрипт: if (transform.TryGetComponent(out S_TocsicHero s_tocsik))
 
         dodgeDamage(Damage); // скилл уклонения
 
@@ -88,6 +82,20 @@ public class S_Herohealth : MonoBehaviour
             event_deadHero?.Invoke();
 
     }
+    /// <summary>
+    /// Получение урона героем
+    /// </summary>
+    /// <param name="Damage">Наносимый урок</param>
+    public void SetDamage(int Damage) // принимает | урон 
+    {
+        dodgeDamage(Damage); // скилл уклонения
+
+        Health -= Damage;
+        if (Health <= 0)
+            event_deadHero?.Invoke();
+    }
+
+    #endregion
 
     private int dodgeDamage(int damage)
     {
@@ -95,8 +103,9 @@ public class S_Herohealth : MonoBehaviour
         if (rnd < dodgeRange)
             damage = 0;
         return damage;
-
     }
+
+
     IEnumerator HpRegenTimer()
     {
         while (true)

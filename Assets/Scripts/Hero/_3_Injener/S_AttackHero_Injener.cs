@@ -7,22 +7,45 @@ public class S_AttackHero_Injener : MonoBehaviour
     [SerializeField] private GameObject prefab_SimplleTuch;
 
     [Header("’арактеристики которые можно прокачивать")]
-    public float distanceOfAttck;
+    [Range(min: 1.5f, max: 6f)] public float distanceOfAttck;
     public int simpleDamage;
     [Range(min: 1, max: 200)] public int countOfSimpleTuch;
 
     public void Shot(List<GameObject> enemylist)
     {
+        int a = 0;
 
-        for (int i = 0; i < countOfSimpleTuch; i++)
+        foreach (var item in enemylist)
         {
-            if (i < enemylist.Count)
+            if (distanceOfAttck >= Vector2.Distance(gameObject.transform.position, item.transform.position))
             {
-                GameObject inst = Instantiate(prefab_SimplleTuch, enemylist[i].transform);
+                GameObject inst = Instantiate(prefab_SimplleTuch, item.transform);
                 inst.GetComponent<S_sendDamageForEnemy>().SendDamage(simpleDamage);
+
+                a++;
             }
-            else
+
+            if (a == countOfSimpleTuch)
                 return;
+
         }
+
+        //for (int i = 0; i < countOfSimpleTuch; i++)
+        //{
+        //    if (i < enemylist.Count)
+        //    {
+        //        foreach (var item in enemylist)
+        //        {
+        //            if (distanceOfAttck >= Vector2.Distance(gameObject.transform.position, enemylist[i].transform.position))
+        //            {
+        //                GameObject inst = Instantiate(prefab_SimplleTuch, enemylist[i].transform);
+        //                inst.GetComponent<S_sendDamageForEnemy>().SendDamage(simpleDamage);
+        //            }
+
+        //        }
+        //    }
+        //    else
+        //        break;
+        //}
     }
 }
