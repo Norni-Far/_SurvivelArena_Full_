@@ -372,6 +372,7 @@ MonoBehaviour:
   S_Subscribes: {fileID: 1884880173}
   S_showHPPlaeyr: {fileID: 989487298}
   S_LoadFromScene: {fileID: 1434078627}
+  SavePoint: {fileID: 1145123464}
   ChosenCharacter:
   - {fileID: 1419960892420051430, guid: 0280f4f8f90c50c42afc3b138cf66a41, type: 3}
   - {fileID: 3093628665353453695, guid: d9310112133954b47b25fec0a9db7d0b, type: 3}
@@ -63367,6 +63368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 0
+  numberHero: 0
   Lvl: {fileID: 978459437}
 --- !u!1 &1145733092
 GameObject:

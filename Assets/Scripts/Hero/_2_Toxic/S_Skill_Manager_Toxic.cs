@@ -92,12 +92,18 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
         {
             case 1:
                 S_Infect.treatForHero += 2;
+                S_Toxin_spawn.treatForHero += 2;
+                S_Cloud_Toxic.treatForHero += 2;
                 break;
             case 2:
                 S_Infect.treatForHero += 5;
+                S_Toxin_spawn.treatForHero += 5;
+                S_Cloud_Toxic.treatForHero += 5;
                 break;
             case 3:
                 S_Infect.treatForHero += 10;
+                S_Toxin_spawn.treatForHero += 10;
+                S_Cloud_Toxic.treatForHero += 10;
                 break;
             
         }

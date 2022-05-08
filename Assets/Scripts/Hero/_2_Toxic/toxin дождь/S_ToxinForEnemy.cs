@@ -8,6 +8,8 @@ public class S_ToxinForEnemy : MonoBehaviour
     public float timePerSeconds;
     private S_Hp_enemy hp_Enemy;
     public GameObject toxin;
+    [HideInInspector] public S_Herohealth heroHealth; // лечение после смерти
+    public int treatForHero;
     private void Start()
     {
         hp_Enemy = transform.GetComponent<S_Hp_enemy>();
@@ -27,5 +29,10 @@ public class S_ToxinForEnemy : MonoBehaviour
             yield return new WaitForSeconds(timePerSeconds);
         }
        
+    }
+    private void OnDisable()
+    {
+        if (heroHealth != null)
+            heroHealth.treat(treatForHero);
     }
 }

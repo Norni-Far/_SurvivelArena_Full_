@@ -11,6 +11,7 @@ public class Game_Manager : MonoBehaviour
     [SerializeField] private S_Subscribes S_Subscribes;
     [SerializeField] private S_ShowHeroHealth_onCanvas S_showHPPlaeyr;
     [SerializeField] private S_Loading_from_scene S_LoadFromScene;
+    [SerializeField] private S_Save_points SavePoint;
 
     // Герой 
     [SerializeField] private GameObject[] ChosenCharacter;
@@ -31,6 +32,7 @@ public class Game_Manager : MonoBehaviour
         S_Subscribes.heroObject = Character;
         Character.GetComponent<S_Herohealth>().numberOfHero = NumberHero;
         Character.GetComponent<S_HeroSee>().numberOfHero = NumberHero;
+        SavePoint.numberHero = NumberHero;
         HeroIsCreate();
 
 

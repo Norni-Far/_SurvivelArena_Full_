@@ -9,10 +9,13 @@ public class S_Toxin_spawn : MonoBehaviour
     public float couldown;
     public float timeLife;
     public int damage;
+    [HideInInspector] public S_Herohealth heroHealth; // лечение после смерти
+    public int treatForHero;
 
     private void Start()
     {
         StartCoroutine(spawnCoud());
+        heroHealth = GetComponent<S_Herohealth>();
     }
 
     private IEnumerator spawnCoud()
@@ -20,8 +23,12 @@ public class S_Toxin_spawn : MonoBehaviour
         while (true)
         {
             GameObject cloudPrefab = Instantiate(Toxin,transform);
-            cloudPrefab.GetComponent<S_Toxin>().couldown = timeLife;
-            cloudPrefab.GetComponent<S_Toxin>().toxinDamagePerSeconds = damage;
+            S_Toxin S_Toxin = cloudPrefab.GetComponent<S_Toxin>();
+            S_Toxin.couldown = timeLife;
+            S_Toxin.toxinDamagePerSeconds = damage;
+            S_Toxin.heroHealth = heroHealth;
+            S_Toxin.treatForHero = treatForHero;
+
             yield return new WaitForSeconds(couldown);
         }
 
