@@ -6,18 +6,19 @@ public class S_Infect_for_enemy : MonoBehaviour
 {
     public int damage = 1;
     public float timePerSeconds = 1;
-    public S_Hp_enemy hp_Enemy;
+    [HideInInspector] public S_Herohealth heroHealth; // лечит героя, после смерти
+    public int treatForHero;
 
     private void Start()
     {
-       
-        hp_Enemy = transform.GetComponent<S_Hp_enemy>();
+
+        S_Hp_enemy hp_Enemy = transform.GetComponent<S_Hp_enemy>();
         timePerSeconds = 1;
-        StartCoroutine(damageForEnemy());
+        StartCoroutine(damageForEnemy(hp_Enemy));
 
     }
 
-    IEnumerator damageForEnemy()
+    IEnumerator damageForEnemy(S_Hp_enemy hp_Enemy)
     {
         while (true)
         {
@@ -25,5 +26,11 @@ public class S_Infect_for_enemy : MonoBehaviour
             yield return new WaitForSeconds(timePerSeconds);
         }
 
+    }
+
+    private void OnDisable()
+    {
+        if(heroHealth !=null)
+        heroHealth.treat(treatForHero);
     }
 }

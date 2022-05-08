@@ -121,4 +121,14 @@ public class S_Herohealth : MonoBehaviour
         }
 
     }
+    public void treat(int hp)
+    {
+            if (Health < HealthMax)
+            {
+                Health += hp;
+
+                if (Health > HealthMax) Health = HealthMax;
+            }
+
+    }
 }

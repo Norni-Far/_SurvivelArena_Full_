@@ -7,11 +7,13 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
     public List<int> skill_lvl = new List<int>(10);
     private S_Toxin_spawn  S_Toxin_spawn;
     private S_Cloud_Toxic S_Cloud_Toxic;
+    private S_Infect S_Infect;
 
     private void Start()
     {
         S_Toxin_spawn = GetComponent<S_Toxin_spawn>();
         S_Cloud_Toxic = GetComponent<S_Cloud_Toxic>();
+        S_Infect = GetComponent<S_Infect>();
     }
     public void ExploreSkill(int number)
     {
@@ -27,7 +29,7 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
                 ExploreSkill_2(number);
                 break;
             case 2:
-                //ExploreSkill_3(number);
+                ExploreSkill_3(number);
                 break;
             case 3:
                // ExploreSkill_4(number);
@@ -82,6 +84,22 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
                 S_Cloud_Toxic.couldown = 2000000f; // делает облако бесконечным
                 S_Cloud_Toxic.timeLife = 2000000f;
                 break;
+        }
+    }
+    private void ExploreSkill_3(int number) // cloud токсиновое облако
+    {
+        switch (skill_lvl[number])
+        {
+            case 1:
+                S_Infect.treatForHero += 2;
+                break;
+            case 2:
+                S_Infect.treatForHero += 5;
+                break;
+            case 3:
+                S_Infect.treatForHero += 10;
+                break;
+            
         }
     }
 

@@ -6,6 +6,7 @@ public class S_Toxin : MonoBehaviour
 {
     public int toxinDamagePerSeconds = 1;
     public float couldown;
+    [HideInInspector] public GameObject hero;
 
     private void Start()
     {
@@ -19,5 +20,9 @@ public class S_Toxin : MonoBehaviour
             enemy.GetComponent<S_ToxinForEnemy>().damage = toxinDamagePerSeconds;
             enemy.GetComponent<S_ToxinForEnemy>().toxin = gameObject;
         }
+    }
+    private void OnDisable()
+    {
+        print(1);
     }
 }

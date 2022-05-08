@@ -7,6 +7,7 @@ public class S_Infect : MonoBehaviour
     public int damage;
     public float timePerSeconds;
     [SerializeField] private GameObject infectPrefab;
+    public int treatForHero;
 
     private void Start()
     {
@@ -20,10 +21,13 @@ public class S_Infect : MonoBehaviour
             {
                 enemy = herohealth.enemyObject;
                 enemy.AddComponent<S_Infect_for_enemy>();
-                enemy.GetComponent<S_Infect_for_enemy>().damage = damage;
-                enemy.GetComponent<S_Infect_for_enemy>().timePerSeconds = timePerSeconds;
+                S_Infect_for_enemy Infect = enemy.GetComponent<S_Infect_for_enemy>();
+                Infect.damage = damage;
+                Infect.timePerSeconds = timePerSeconds;
+                Infect.heroHealth = herohealth;
+                Infect.treatForHero = treatForHero;
                 GameObject cloud = Instantiate(infectPrefab, enemy.transform);
-                cloud.transform.localPosition = new Vector2(0,0);
+                cloud.transform.localPosition = new Vector2(0, 0);
             }
 
 

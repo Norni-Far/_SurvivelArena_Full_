@@ -13,6 +13,7 @@ public class UI_Manager : MonoBehaviour
     public void StartMain(int number)
     {
         numberHero = number;
+        GetComponent<S_Buy_Skill>().numberHero = numberHero;
     }
     public void GiveExpirienceFromHero(int exp)
     {

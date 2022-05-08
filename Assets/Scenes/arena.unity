@@ -2298,7 +2298,7 @@ RectTransform:
   - {fileID: 1621453994}
   - {fileID: 1540294617}
   m_Father: {fileID: 936463527}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -14616,6 +14616,7 @@ MonoBehaviour:
   - {fileID: 716787243}
   - {fileID: 76894153}
   - {fileID: 1621430059}
+  numberHero: 0
   skill_lvl: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &263503378
 GameObject:
@@ -40331,7 +40332,7 @@ RectTransform:
   - {fileID: 1738349321}
   - {fileID: 669929666}
   m_Father: {fileID: 936463527}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -50812,8 +50813,8 @@ RectTransform:
   - {fileID: 127327621}
   - {fileID: 1397667638509146106}
   - {fileID: 978459435}
-  - {fileID: 716787244}
   - {fileID: 26767575}
+  - {fileID: 716787244}
   - {fileID: 76894154}
   - {fileID: 1621430060}
   m_Father: {fileID: 0}

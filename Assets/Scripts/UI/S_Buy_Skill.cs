@@ -7,7 +7,7 @@ public class S_Buy_Skill : MonoBehaviour
     public delegate void delegats(int number);
     public event delegats event_skillForHero;
     [SerializeField] GameObject [] skills_panel;
-    private int numberHero;
+    [HideInInspector] public int numberHero;
     [SerializeField] private int[] skill_lvl = new int[10];
     public void BuySkill(int numberSkills)
     {
