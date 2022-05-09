@@ -11,7 +11,7 @@ public class S_Lut_moveToHero : MonoBehaviour
     bool Go;
     void Update()
     {
-        speed += 0.03f;
+        speed += 0.3f;
         if (Go)
         {
             /*

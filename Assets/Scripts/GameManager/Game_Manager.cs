@@ -26,7 +26,7 @@ public class Game_Manager : MonoBehaviour
     {
 
         // загрузка номмера героя
-        //NumberHero = S_LoadFromScene.LoadFromScene();
+        NumberHero = S_LoadFromScene.LoadFromScene();
 
         Character = Instantiate(ChosenCharacter[NumberHero]);
         S_Subscribes.heroObject = Character;

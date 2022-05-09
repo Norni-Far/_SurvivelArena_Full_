@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1126368404118400812}
   - component: {fileID: -883782567164170107}
   - component: {fileID: 4186029980318911206}
+  - component: {fileID: 4492139175645306920}
   m_Layer: 0
   m_Name: Enemy_Expirience_
   m_TagString: lut
@@ -159,6 +160,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4492139175645306920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126368404118400808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344f9e6425302b8459a51d8d556bb934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeDead: 30
 --- !u!1 &3915322332639214139
 GameObject:
   m_ObjectHideFlags: 0
