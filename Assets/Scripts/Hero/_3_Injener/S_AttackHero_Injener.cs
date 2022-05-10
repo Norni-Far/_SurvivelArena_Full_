@@ -15,11 +15,11 @@ public class S_AttackHero_Injener : MonoBehaviour
     {
         int a = 0;
 
-        foreach (var item in enemylist)
+        for (int i = 0; i < enemylist.Count; i++)
         {
-            if (distanceOfAttck >= Vector2.Distance(gameObject.transform.position, item.transform.position))
+            if (distanceOfAttck >= Vector2.Distance(gameObject.transform.position, enemylist[i].transform.position))
             {
-                GameObject inst = Instantiate(prefab_SimplleTuch, item.transform);
+                GameObject inst = Instantiate(prefab_SimplleTuch, enemylist[i].transform);
                 inst.GetComponent<S_sendDamageForEnemy>().SendDamage(simpleDamage);
 
                 a++;
@@ -27,25 +27,22 @@ public class S_AttackHero_Injener : MonoBehaviour
 
             if (a == countOfSimpleTuch)
                 return;
-
         }
 
-        //for (int i = 0; i < countOfSimpleTuch; i++)
+        //foreach (var item in enemylist)
         //{
-        //    if (i < enemylist.Count)
+        //    if (distanceOfAttck >= Vector2.Distance(gameObject.transform.position, item.transform.position))
         //    {
-        //        foreach (var item in enemylist)
-        //        {
-        //            if (distanceOfAttck >= Vector2.Distance(gameObject.transform.position, enemylist[i].transform.position))
-        //            {
-        //                GameObject inst = Instantiate(prefab_SimplleTuch, enemylist[i].transform);
-        //                inst.GetComponent<S_sendDamageForEnemy>().SendDamage(simpleDamage);
-        //            }
+        //        GameObject inst = Instantiate(prefab_SimplleTuch, item.transform);
+        //        inst.GetComponent<S_sendDamageForEnemy>().SendDamage(simpleDamage);
 
-        //        }
+        //        a++;
         //    }
-        //    else
-        //        break;
+
+        //    if (a == countOfSimpleTuch)
+        //        return;
+
         //}
+
     }
 }

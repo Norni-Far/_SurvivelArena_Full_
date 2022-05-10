@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 2327608993306599512}
   - component: {fileID: 5196263072876286578}
   - component: {fileID: 953485534904360470}
+  - component: {fileID: 8785175576622633144}
   m_Layer: 0
   m_Name: Hero_3_Injener
   m_TagString: Untagged
@@ -371,8 +372,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab_SimplleTuch: {fileID: 375123529971480134, guid: 924639dc763654b4ba01d2782c20ceea, type: 3}
   distanceOfAttck: 1.5
-  simpleDamage: 0
+  simpleDamage: 10
   countOfSimpleTuch: 2
+--- !u!114 &8785175576622633144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417426998736744527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc92ad2c92a9714b9d6bd8aee2672f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab_Turret: {fileID: 8166501822080782224, guid: 141754c88627a094a9eec67596576aba, type: 3}
+  timeReloadspawn: 10
 --- !u!1 &417426998872890628
 GameObject:
   m_ObjectHideFlags: 0

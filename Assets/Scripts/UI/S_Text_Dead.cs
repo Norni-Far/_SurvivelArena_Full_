@@ -6,6 +6,9 @@ public class S_Text_Dead : MonoBehaviour
     [SerializeField] GameObject textDead;
     [SerializeField] GameObject buttonRestart;
     [SerializeField] GameObject buttonMenu;
+
+    [SerializeField] GameObject joystickObject;
+
     private bool dead;
     private float a; //прозрачность панели
     [SerializeField] private S_Scene_Manager Scene_Manager;
@@ -29,6 +32,7 @@ public class S_Text_Dead : MonoBehaviour
                 buttonMenu.SetActive(true);
                 textDead.SetActive(true);
                 WorldOfTime.pauseOnPause();
+                joystickObject.SetActive(false);
             }
         }
     }

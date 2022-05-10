@@ -63,7 +63,7 @@ public class S_HeroSee : MonoBehaviour
                     // перезарядка
                     yield return new WaitForSeconds(timeForReloadOfShot);
                 }
-            
+
             case 2:
                 while (true)
                 {
@@ -74,7 +74,8 @@ public class S_HeroSee : MonoBehaviour
                     if (Target != null)
                     {
                         // обычная стрельба 
-                        s_AttackHero_Injener.Shot(ISeeIts);
+                        List<GameObject> listOfEnemy = ISeeIts;
+                        s_AttackHero_Injener.Shot(listOfEnemy);
 
                         // особая стрельба (работает отдельно) 
                     }
