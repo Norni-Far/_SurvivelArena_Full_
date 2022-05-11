@@ -12,10 +12,12 @@ public class S_Herohealth : MonoBehaviour
     [HideInInspector] public int numberOfHero;
 
     public int dodgeRange;
+    public int protection;
     public int HpRegen = 0;
     public int HealthMax = 400;
     public int Health;
-
+    public bool secondChanceActive;
+    private bool activeChance; // активна ли способность сейчас
     [SerializeField] private RectTransform hp_jbject;
     private int startHealth;
     public GameObject enemyObject;
@@ -49,9 +51,7 @@ public class S_Herohealth : MonoBehaviour
     private void UpdateHpHero()
     {
         startHealth = HealthMax;
-
-        if (hp_jbject.transform.localPosition.x > -0.75f)
-            hp_jbject.transform.localPosition = new Vector3(ChangeHpHero(), 0, 0);
+        hp_jbject.transform.localPosition = new Vector3(ChangeHpHero(), 0, 0);
     }
 
     private float ChangeHpHero()
@@ -64,37 +64,26 @@ public class S_Herohealth : MonoBehaviour
 
     #region Приём урона
 
-    /// <summary>
-    /// Получение урона героем и приём того кто ударил
-    /// </summary>
-    /// <param name="Damage">Наносимый Урон</param>
-    /// <param name="Enemy">Кто наносит урон</param>
+    
     public void SetDamage(int Damage, GameObject Enemy) // принимает | урон | кто наносит урон |
     {
         enemyObject = Enemy;
-
-        // ecли Токсик, то посылаешь "enemyObject" в другой скрипт: if (transform.TryGetComponent(out S_TocsicHero s_tocsik))
-
-        dodgeDamage(Damage); // скилл уклонения
-
-        Health -= Damage;
-        if (Health <= 0)
-            event_deadHero?.Invoke();
-
+        setDamageContinuation(Damage);
     }
-    /// <summary>
-    /// Получение урона героем
-    /// </summary>
-    /// <param name="Damage">Наносимый урок</param>
     public void SetDamage(int Damage) // принимает | урон 
     {
-        dodgeDamage(Damage); // скилл уклонения
-
-        Health -= Damage;
-        if (Health <= 0)
-            event_deadHero?.Invoke();
+        setDamageContinuation(Damage);
     }
 
+    private void setDamageContinuation (int Damage)
+    {
+        dodgeDamage(Damage);
+        damageReduction(Damage);
+        Health -= Damage;
+        if (Health <= 0)
+            secondChance();
+           
+    }
     #endregion
 
     private int dodgeDamage(int damage)
@@ -103,6 +92,21 @@ public class S_Herohealth : MonoBehaviour
         if (rnd < dodgeRange)
             damage = 0;
         return damage;
+    }
+    private int damageReduction(int damage)
+    {
+        if (protection >= 0)
+            damage -= protection;
+        else
+            damage /= 2; // особая способность, уменьшающая урон вдвое
+        if (protection == -2)
+            returnDamageForEnemy(damage);
+        return damage;
+    }
+     private void returnDamageForEnemy(int damage)
+    {
+        int returnDamage = damage / 4;
+        enemyObject.GetComponent<S_Hp_enemy>().hit(returnDamage);
     }
 
 
@@ -131,4 +135,33 @@ public class S_Herohealth : MonoBehaviour
             }
 
     }
+    private void secondChance()  //скилл второй шанс
+    {
+        if (!activeChance)
+        {
+            if (secondChanceActive)
+            {
+                GetComponent<SecondChance>().startSecondChance();
+                activeChance = true;
+            }
+            else
+
+                DeadIvent();
+        }
+       
+        
+    }
+    public void treatAfterChance()
+    {
+        Health = HealthMax / 2;
+        secondChanceActive = false;
+        activeChance = false;
+    }
+
+    public void DeadIvent()
+    {
+        event_deadHero?.Invoke();
+    }
+
+
 }

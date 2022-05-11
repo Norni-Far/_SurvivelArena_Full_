@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 8325131128336551096}
   - component: {fileID: 7143486327406431577}
   - component: {fileID: -2157846839701698623}
+  - component: {fileID: 6334683648266588109}
   m_Layer: 0
   m_Name: Hero_2_Toksic
   m_TagString: Untagged
@@ -430,6 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfHero: 0
   dodgeRange: 0
+  protection: 0
   HpRegen: 0
   HealthMax: 200
   Health: 200
@@ -517,6 +519,7 @@ MonoBehaviour:
   damage: 5
   timePerSeconds: 2
   infectPrefab: {fileID: 1367739294567075389, guid: 80d0b542f1a3b834f8c1d13092b44665, type: 3}
+  treatForHero: 0
 --- !u!114 &8325131128336551096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,6 +557,8 @@ MonoBehaviour:
   couldown: 20
   timeLife: 5
   damage: 2
+  heroHealth: {fileID: 0}
+  treatForHero: 0
 --- !u!114 &-2157846839701698623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,6 +575,21 @@ MonoBehaviour:
   couldown: 20
   timeLife: 5
   damage: 3
+  scale: 1
+  heroHealth: {fileID: 0}
+  treatForHero: 0
+--- !u!114 &6334683648266588109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093628665353453695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132e9344310b3824183dd181f3134c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3093628665758379316
 GameObject:
   m_ObjectHideFlags: 0

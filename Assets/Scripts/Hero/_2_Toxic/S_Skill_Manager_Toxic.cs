@@ -8,12 +8,15 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
     private S_Toxin_spawn  S_Toxin_spawn;
     private S_Cloud_Toxic S_Cloud_Toxic;
     private S_Infect S_Infect;
+    private S_Herohealth S_Herohealth;
 
     private void Start()
     {
         S_Toxin_spawn = GetComponent<S_Toxin_spawn>();
         S_Cloud_Toxic = GetComponent<S_Cloud_Toxic>();
         S_Infect = GetComponent<S_Infect>();
+        S_Herohealth = GetComponent<S_Herohealth>();
+        
     }
     public void ExploreSkill(int number)
     {
@@ -32,10 +35,10 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
                 ExploreSkill_3(number);
                 break;
             case 3:
-               // ExploreSkill_4(number);
+                ExploreSkill_4(number);
                 break;
             case 4:
-               // ExploreSkill_5(number);
+                ExploreSkill_5(number);
                 break;
             case 5:
               //  ExploreSkill_6(number);
@@ -106,6 +109,50 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
                 S_Cloud_Toxic.treatForHero += 10;
                 break;
             
+        }
+    }
+
+    private void ExploreSkill_4(int number) // Защита
+    {
+        switch (skill_lvl[number])
+        {
+            case 1:
+                S_Herohealth.protection += 1;
+                break;
+            case 2:
+                S_Herohealth.protection += 1;
+                break;
+            case 3:
+                S_Herohealth.protection += 2;
+                break;
+            case 4:
+                S_Herohealth.protection = -1; 
+                break;
+
+        }
+    }
+
+    private void ExploreSkill_5(int number) // Увеличение жизней
+    {
+        switch (skill_lvl[number])
+        {
+            case 1:
+                transform.GetComponent<S_Herohealth>().Health += 100;
+                transform.GetComponent<S_Herohealth>().HealthMax += 100;
+                break;
+            case 2:
+                transform.GetComponent<S_Herohealth>().Health += 200;
+                transform.GetComponent<S_Herohealth>().HealthMax += 200;
+                break;
+            case 3:
+                transform.GetComponent<S_Herohealth>().HpRegen += 2;
+                break;
+            case 4:
+                transform.GetComponent<S_Herohealth>().HpRegen += 10;
+                break;
+            case 5:
+                transform.GetComponent<S_Herohealth>().secondChanceActive = true;
+                break;
         }
     }
 

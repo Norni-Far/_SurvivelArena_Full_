@@ -44,10 +44,10 @@ public class S_Skill_Add_Toxic : MonoBehaviour
                     skill5(skill_Obj[i], i);
                     break;
                 case 5:
-                    skill6(skill_Obj[i], i);
+              //      skill6(skill_Obj[i], i);
                     break;
                 case 6:
-                    skill7(skill_Obj[i], i);
+             //       skill7(skill_Obj[i], i);
                     break;
             }
         }
@@ -113,42 +113,25 @@ public class S_Skill_Add_Toxic : MonoBehaviour
         switch (skill_lvl[number])
         {
             case 0:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Переодически падает метеорит.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Защищает от части наносимого по герою урона.";
                 break;
             case 1:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Умелививает урон на 40.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает защиту.";
                 break;
             case 2:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Метеорит падает чаще.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает защиту.";
                 break;
             case 3:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Метеорит оставляет огненный след.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Получает полько половину урона.";
                 break;
             case 4:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Огненный след замедляет передвижение врагов.";
+                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Возвращает часть урона обратно врагу.";
                 break;
         }
     }
 
+
     private void skill5(GameObject panel, int number)
-    {
-        switch (skill_lvl[number])
-        {
-            case 0:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает скорость бега.";
-                break;
-            case 1:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает скорость бега.";
-                break;
-            case 2:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Дает шанс увернуться от атаки.";
-                break;
-            case 3:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает шанс уворота.";
-                break;
-        }
-    }
-    private void skill6(GameObject panel, int number)
     {
         switch (skill_lvl[number])
         {
@@ -170,23 +153,6 @@ public class S_Skill_Add_Toxic : MonoBehaviour
         }
     }
 
-    private void skill7(GameObject panel, int number)
-    {
-        switch (skill_lvl[number])
-        {
-            case 0:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон.";
-                break;
-            case 1:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Увеличивает урон."; // сколько???
-                break;
-            case 2:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "Удар по одной и той же цели увеличивает урон.";
-                break;
-            case 3:
-                panel.transform.GetChild(1).transform.GetComponent<Text>().text = "За каждого убитого врага герой получает дополнительный урон";
-                break;
-        }
-    }
+
 
 }
