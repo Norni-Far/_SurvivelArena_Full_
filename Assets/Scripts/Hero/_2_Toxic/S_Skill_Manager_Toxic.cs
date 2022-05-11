@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,15 +7,16 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
     private S_Toxin_spawn  S_Toxin_spawn;
     private S_Cloud_Toxic S_Cloud_Toxic;
     private S_Infect S_Infect;
-    private S_Herohealth S_Herohealth;
+    private S_SetDamageForHero S_Herohealth;
+    private S_HealthHero S_HealthHero;
 
     private void Start()
     {
         S_Toxin_spawn = GetComponent<S_Toxin_spawn>();
         S_Cloud_Toxic = GetComponent<S_Cloud_Toxic>();
         S_Infect = GetComponent<S_Infect>();
-        S_Herohealth = GetComponent<S_Herohealth>();
-        
+        S_Herohealth = GetComponent<S_SetDamageForHero>();
+        S_HealthHero = GetComponent<S_HealthHero>();
     }
     public void ExploreSkill(int number)
     {
@@ -137,21 +137,19 @@ public class S_Skill_Manager_Toxic : MonoBehaviour
         switch (skill_lvl[number])
         {
             case 1:
-                transform.GetComponent<S_Herohealth>().Health += 100;
-                transform.GetComponent<S_Herohealth>().HealthMax += 100;
+                S_HealthHero.AddHealth(100);
                 break;
             case 2:
-                transform.GetComponent<S_Herohealth>().Health += 200;
-                transform.GetComponent<S_Herohealth>().HealthMax += 200;
+                S_HealthHero.AddHealth(200);
                 break;
             case 3:
-                transform.GetComponent<S_Herohealth>().HpRegen += 2;
+                transform.GetComponent<S_SetDamageForHero>().treatPerSecond += 2;
                 break;
             case 4:
-                transform.GetComponent<S_Herohealth>().HpRegen += 10;
+                transform.GetComponent<S_SetDamageForHero>().treatPerSecond += 10;
                 break;
             case 5:
-                transform.GetComponent<S_Herohealth>().secondChanceActive = true;
+                transform.GetComponent<S_SetDamageForHero>().secondChanceActive = true;
                 break;
         }
     }

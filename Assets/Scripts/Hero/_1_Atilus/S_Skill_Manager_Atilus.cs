@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +5,18 @@ public class S_Skill_Manager_Atilus : MonoBehaviour
 {
     [SerializeField] private S_Shot_forHero_1_Atilus S_Shot;
     public List<int> skill_lvl = new List<int> (10);
-    
-    
+    private S_Toxin_spawn S_Toxin_spawn;
+    private S_Cloud_Toxic S_Cloud_Toxic;
+    private S_Infect S_Infect;
+    private S_SetDamageForHero S_Herohealth;
+    private S_HealthHero S_HealthHero;
+
+    private void Start()
+    {
+        
+        S_Herohealth = GetComponent<S_SetDamageForHero>();
+        S_HealthHero = GetComponent<S_HealthHero>();
+    }
 
     public void ExploreSkill(int number)   
     {
@@ -124,10 +133,10 @@ public class S_Skill_Manager_Atilus : MonoBehaviour
                 transform.GetComponent<S_HeroMove>().VelocityOfHero *= 1.2f;
                 break;
             case 3:
-                transform.GetComponent<S_Herohealth>().dodgeRange += 10;
+                transform.GetComponent<S_SetDamageForHero>().dodgeRange += 10;
                 break;
             case 4:
-                transform.GetComponent<S_Herohealth>().dodgeRange += 20;
+                transform.GetComponent<S_SetDamageForHero>().dodgeRange += 20;
                 break;
         }
     }
@@ -137,21 +146,19 @@ public class S_Skill_Manager_Atilus : MonoBehaviour
         switch (skill_lvl[number])
         {
             case 1:
-                transform.GetComponent<S_Herohealth>().Health +=100;
-                transform.GetComponent<S_Herohealth>().HealthMax += 100;
+                S_HealthHero.AddHealth(200);
                 break;
             case 2:
-                transform.GetComponent<S_Herohealth>().Health += 200;
-                transform.GetComponent<S_Herohealth>().HealthMax += 200;
+                S_HealthHero.AddHealth(200);
                 break;
             case 3:
-                transform.GetComponent<S_Herohealth>().HpRegen += 2;
+                S_Herohealth.treatPerSecond +=2;
                 break;
             case 4:
-                transform.GetComponent<S_Herohealth>().HpRegen += 10;
+                S_Herohealth.treatPerSecond += 5;
                 break;
             case 5:
-               // transform.GetComponent<S_Herohealth>().HpRegen += 10;
+                S_Herohealth.secondChanceActive = true;
                 break;
         }
     }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -33,7 +31,6 @@ public class Game_Manager : MonoBehaviour
 
         Character = Instantiate(ChosenCharacter[NumberHero]);
         S_Subscribes.heroObject = Character;
-        Character.GetComponent<S_Herohealth>().numberOfHero = NumberHero;
         Character.GetComponent<S_HeroSee>().numberOfHero = NumberHero;
         SavePoint.numberHero = NumberHero;
         HeroIsCreate();
@@ -54,8 +51,6 @@ public class Game_Manager : MonoBehaviour
     {
         // подключения к герою управления
         Character.GetComponent<S_HeroMove>().HanglePoint = hanglePointForHero;
-        // передача герою его порядкового номера
-        Character.GetComponent<S_Herohealth>().numberOfHero = NumberHero;
 
 
         // подписки для героев
@@ -67,6 +62,6 @@ public class Game_Manager : MonoBehaviour
 
 
         // Старт рождения героя (вместо метода Start у героя)
-        Character.GetComponent<S_Herohealth>().BirthHero();
+        Character.GetComponent<S_SetDamageForHero>().BirthHero();
     }
 }

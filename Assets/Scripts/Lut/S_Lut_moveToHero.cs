@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class S_Lut_moveToHero : MonoBehaviour
@@ -28,7 +26,7 @@ public class S_Lut_moveToHero : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out S_Herohealth S_Hero))
+        if (collision.TryGetComponent(out S_SetDamageForHero S_Hero))
         {
             Player = S_Hero.gameObject;
             Go = true;

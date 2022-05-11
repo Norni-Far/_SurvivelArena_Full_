@@ -14,7 +14,7 @@ public class SecondChance : MonoBehaviour
     IEnumerator damageForEnemy( )
     {
             yield return new WaitForSeconds(timeSecondChance);
-            GetComponent<S_Herohealth>().treatAfterChance();
+           // GetComponent<S_Herohealth>().treatAfterChance();
 
     }
 

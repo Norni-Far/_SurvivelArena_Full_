@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[System.Obsolete]
 
 public class S_LineOfTurretBullet : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class S_LineOfTurretBullet : MonoBehaviour
         StartCoroutine(SendDamage());
         lineOfAttck.SetPosition(0, transform.position);
     }
+
 
     private void Update()
     {

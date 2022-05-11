@@ -1,12 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class S_Infect_for_enemy : MonoBehaviour
 {
     public int damage = 1;
     public float timePerSeconds = 1;
-    [HideInInspector] public S_Herohealth heroHealth; // лечит героя, после смерти
+    [HideInInspector] public S_HealthHero heroHealth; // лечит героя, после смерти
     public int treatForHero;
 
     private void Start()
@@ -31,6 +30,6 @@ public class S_Infect_for_enemy : MonoBehaviour
     private void OnDisable()
     {
         if(heroHealth !=null)
-        heroHealth.treat(treatForHero);
+        heroHealth.Regen(treatForHero);
     }
 }

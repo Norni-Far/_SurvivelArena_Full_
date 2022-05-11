@@ -205,13 +205,14 @@ GameObject:
   - component: {fileID: 417426998736744498}
   - component: {fileID: 417426998736744499}
   - component: {fileID: 417426998736744526}
-  - component: {fileID: 417426998736744497}
   - component: {fileID: 417426998736744524}
   - component: {fileID: 1459367061344346460}
   - component: {fileID: 2327608993306599512}
   - component: {fileID: 5196263072876286578}
   - component: {fileID: 953485534904360470}
   - component: {fileID: 8785175576622633144}
+  - component: {fileID: -8340317508753676082}
+  - component: {fileID: 733976336217678115}
   m_Layer: 0
   m_Name: Hero_3_Injener
   m_TagString: Untagged
@@ -276,25 +277,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.13
---- !u!114 &417426998736744497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 417426998736744527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc735f84024c44b4da0862269e569b66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfHero: 0
-  dodgeRange: 0
-  HpRegen: 0
-  HealthMax: 200
-  Health: 200
-  hp_jbject: {fileID: 417426999313367687}
-  enemyObject: {fileID: 0}
 --- !u!114 &417426998736744524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,6 +370,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab_Turret: {fileID: 8166501822080782224, guid: 141754c88627a094a9eec67596576aba, type: 3}
   timeReloadspawn: 10
+--- !u!114 &-8340317508753676082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417426998736744527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faca1879a495f694cac50e58fe9bd6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthHero: 0
+  hp_object: {fileID: 417426999313367687}
+--- !u!114 &733976336217678115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417426998736744527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66099cf702eb78e46b14434221a926ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dodgeRange: 0
+  protection: 0
+  secondChanceActive: 0
+  enemyObject: {fileID: 0}
+  treatPerSecond: 0
 --- !u!1 &417426998872890628
 GameObject:
   m_ObjectHideFlags: 0

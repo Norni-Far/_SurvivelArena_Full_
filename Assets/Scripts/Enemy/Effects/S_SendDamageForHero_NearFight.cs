@@ -8,9 +8,9 @@ public class S_SendDamageForHero_NearFight : MonoBehaviour
     public void SendDamageForHero()
     {
         if (enemy)
-            transform.parent.parent.GetComponent<S_Herohealth>().SetDamage(damage, enemy);
+            transform.parent.parent.GetComponent<S_SetDamageForHero>().SetDamage(damage, enemy);
         else
-            transform.parent.parent.GetComponent<S_Herohealth>().SetDamage(damage);
+            transform.parent.parent.GetComponent<S_SetDamageForHero>().SetDamage(damage);
 
     }
 }

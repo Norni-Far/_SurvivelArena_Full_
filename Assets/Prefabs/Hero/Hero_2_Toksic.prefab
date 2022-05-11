@@ -342,7 +342,6 @@ GameObject:
   - component: {fileID: 3093628665353453570}
   - component: {fileID: 3093628665353453571}
   - component: {fileID: 3093628665353453694}
-  - component: {fileID: 3093628665353453569}
   - component: {fileID: 3093628665353453692}
   - component: {fileID: 1110538946578534504}
   - component: {fileID: 7437955362151653954}
@@ -353,6 +352,8 @@ GameObject:
   - component: {fileID: 7143486327406431577}
   - component: {fileID: -2157846839701698623}
   - component: {fileID: 6334683648266588109}
+  - component: {fileID: -5653883355653305288}
+  - component: {fileID: 6468475856569141018}
   m_Layer: 0
   m_Name: Hero_2_Toksic
   m_TagString: Untagged
@@ -417,26 +418,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.13
---- !u!114 &3093628665353453569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3093628665353453695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc735f84024c44b4da0862269e569b66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfHero: 0
-  dodgeRange: 0
-  protection: 0
-  HpRegen: 0
-  HealthMax: 200
-  Health: 200
-  hp_jbject: {fileID: 3093628664923599543}
-  enemyObject: {fileID: 0}
 --- !u!114 &3093628665353453692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,7 +538,7 @@ MonoBehaviour:
   couldown: 20
   timeLife: 5
   damage: 2
-  heroHealth: {fileID: 0}
+  S_HealthHero: {fileID: 0}
   treatForHero: 0
 --- !u!114 &-2157846839701698623
 MonoBehaviour:
@@ -576,7 +557,7 @@ MonoBehaviour:
   timeLife: 5
   damage: 3
   scale: 1
-  heroHealth: {fileID: 0}
+  S_HealthHero: {fileID: 0}
   treatForHero: 0
 --- !u!114 &6334683648266588109
 MonoBehaviour:
@@ -590,6 +571,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132e9344310b3824183dd181f3134c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeSecondChance: 5
+--- !u!114 &-5653883355653305288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093628665353453695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faca1879a495f694cac50e58fe9bd6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthHero: 0
+  hp_object: {fileID: 3093628664923599543}
+--- !u!114 &6468475856569141018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093628665353453695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66099cf702eb78e46b14434221a926ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dodgeRange: 0
+  protection: 0
+  secondChanceActive: 0
+  enemyObject: {fileID: 0}
+  treatPerSecond: 0
 --- !u!1 &3093628665758379316
 GameObject:
   m_ObjectHideFlags: 0

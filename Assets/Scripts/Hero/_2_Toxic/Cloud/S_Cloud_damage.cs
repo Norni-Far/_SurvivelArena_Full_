@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class S_Cloud_damage : MonoBehaviour
@@ -7,7 +5,7 @@ public class S_Cloud_damage : MonoBehaviour
     public int CloudDamagePerSeconds = 1;
     public float timeLife;
     public int damage;
-    [HideInInspector] public S_Herohealth heroHealth; // лечение после смерти
+    [HideInInspector] public S_HealthHero S_HealthHero; // лечение после смерти
     public int treatForHero;
 
     private void Start()
@@ -22,7 +20,7 @@ public class S_Cloud_damage : MonoBehaviour
             S_ToxinForEnemy toxin = enemy.GetComponent<S_ToxinForEnemy>();
             toxin.toxin = gameObject;
             toxin.damage = damage;
-            toxin.heroHealth = heroHealth;
+            toxin.heroHealth = S_HealthHero;
             toxin.treatForHero = treatForHero;
 
         }

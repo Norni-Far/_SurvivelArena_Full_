@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1419960892420051354}
   - component: {fileID: 1419960892420051431}
   - component: {fileID: 1419960892420051429}
-  - component: {fileID: 1419960892420051352}
   - component: {fileID: 1419960892420051428}
   - component: {fileID: 1419960892420051353}
   - component: {fileID: 1419960892420051359}
@@ -20,6 +19,8 @@ GameObject:
   - component: {fileID: 9068065561950138685}
   - component: {fileID: 487519576174258472}
   - component: {fileID: 6801170974549865435}
+  - component: {fileID: 5259451898413049805}
+  - component: {fileID: 7643513711303209370}
   m_Layer: 0
   m_Name: Hero_1_Atilus
   m_TagString: Untagged
@@ -102,25 +103,6 @@ MonoBehaviour:
   HanglePoint: {fileID: 0}
   rb: {fileID: 1419960892420051354}
   VelocityOfHero: 1.5
---- !u!114 &1419960892420051352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419960892420051430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc735f84024c44b4da0862269e569b66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  s_See: {fileID: 1419960892420051428}
-  numberOfHero: 0
-  dodgeRange: 0
-  HpRegen: 0
-  HealthMax: 200
-  Health: 200
-  hp_jbject: {fileID: 1419960892984107822}
 --- !u!114 &1419960892420051428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_Shot_forHero_1_Atilus: {fileID: 1419960892420051353}
   s_Shot_forHero_2_HHH: {fileID: 0}
+  s_AttackHero_Injener: {fileID: 0}
   CircleRadiusSee: {fileID: 1419960893207618007}
   ISeeIts: []
   numberOfHero: 0
@@ -240,6 +223,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01c25320880bab4ba1faf0cd18ff145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5259451898413049805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419960892420051430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faca1879a495f694cac50e58fe9bd6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthHero: 0
+  hp_object: {fileID: 1419960892984107822}
+--- !u!114 &7643513711303209370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419960892420051430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66099cf702eb78e46b14434221a926ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dodgeRange: 0
+  protection: 0
+  secondChanceActive: 0
+  enemyObject: {fileID: 0}
+  treatPerSecond: 0
 --- !u!1 &1419960892551953581
 GameObject:
   m_ObjectHideFlags: 0

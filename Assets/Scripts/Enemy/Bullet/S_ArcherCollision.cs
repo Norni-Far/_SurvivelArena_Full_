@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
@@ -19,9 +17,9 @@ public class S_ArcherCollision : MonoBehaviour
 
             // отнимание жизней
             if (Enemy)
-                S_heroBody.transform.parent.parent.GetComponent<S_Herohealth>().SetDamage(damage, Enemy);
+                S_heroBody.transform.parent.parent.GetComponent<S_SetDamageForHero>().SetDamage(damage, Enemy);
             else
-                S_heroBody.transform.parent.parent.GetComponent<S_Herohealth>().SetDamage(damage);
+                S_heroBody.transform.parent.parent.GetComponent<S_SetDamageForHero>().SetDamage(damage);
 
             S_moveArrow.enabled = false;
 

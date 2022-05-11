@@ -20,12 +20,11 @@ public class S_Subscribes : MonoBehaviour
     public void Hero_Subscribes(int numOfHero)
     {
         numberHero = numOfHero;
-
         // общее для героев 
         // для подбирания опыта героем
         heroObject.GetComponent<S_InformationAboutHero>().S_ExpirianceForHero.event_SendExpiriance += UI_Manager.GiveExpirienceFromHero;
         // для показа панели смерти героя 
-        heroObject.GetComponent<S_Herohealth>().event_deadHero += UI_Manager.TextDead;
+        heroObject.GetComponent<S_SetDamageForHero>().event_deadHero += UI_Manager.TextDead;
 
         // индивидуально для героев
         switch (numberHero)

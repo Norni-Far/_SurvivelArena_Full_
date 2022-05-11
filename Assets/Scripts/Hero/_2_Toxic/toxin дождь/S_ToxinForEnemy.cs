@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class S_ToxinForEnemy : MonoBehaviour
@@ -8,7 +7,7 @@ public class S_ToxinForEnemy : MonoBehaviour
     public float timePerSeconds;
     private S_Hp_enemy hp_Enemy;
     public GameObject toxin;
-    [HideInInspector] public S_Herohealth heroHealth; // лечение после смерти
+    [HideInInspector] public S_HealthHero heroHealth; // лечение после смерти
     public int treatForHero;
     private void Start()
     {
@@ -33,6 +32,6 @@ public class S_ToxinForEnemy : MonoBehaviour
     private void OnDisable()
     {
         if (heroHealth != null)
-            heroHealth.treat(treatForHero);
+            heroHealth.Regen(treatForHero);
     }
 }
