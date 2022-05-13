@@ -18,6 +18,7 @@ public class S_turretFromInjener_See : MonoBehaviour
     #region Поиск и обновление списка врагов
     private void RemoveEnemyFromList(GameObject Enemy) => ISeeIts.Remove(Enemy);
 
+    [System.Obsolete]
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent<S_moveEnemy>(out S_moveEnemy s_moveEnemy))

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class S_HealthHero : MonoBehaviour //, IHeroHealth
+public class S_HealthHero : MonoBehaviour
 {
     [SerializeField] private int healthHero;
     private int healthHeroMax;

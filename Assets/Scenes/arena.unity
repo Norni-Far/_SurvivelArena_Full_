@@ -378,7 +378,7 @@ MonoBehaviour:
   - {fileID: 3093628665353453695, guid: d9310112133954b47b25fec0a9db7d0b, type: 3}
   - {fileID: 417426998736744527, guid: c759c541c668c9c4083ceca4c329e2c6, type: 3}
   hanglePointForHero: {fileID: 859884391}
-  NumberHero: 2
+  NumberHero: 1
 --- !u!1 &3835940
 GameObject:
   m_ObjectHideFlags: 0

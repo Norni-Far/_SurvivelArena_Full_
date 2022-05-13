@@ -20,6 +20,7 @@ public class S_TurretShot : MonoBehaviour
         colliderOfRadiusAttack.radius = radiusOfAttack;
     }
 
+    [System.Obsolete]
     public void Shot(GameObject enemy)
     {
         GameObject inst = Instantiate(prefab_LineOfShot, pointOfspawn.position, pointOfspawn.rotation, pointOfspawn.transform);
