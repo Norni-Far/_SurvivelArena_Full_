@@ -17,15 +17,11 @@ public class Game_Manager : MonoBehaviour
     private GameObject Character;
 
     //[SerializeField] private GameObject expirianceHeroObj; // объект опыта от героя
-
+    [SerializeField] private bool spawnEnemyBool = true;
     [Range(min: 0, max: 2)] public int NumberHero;
 
     public void StartForBtn()
     {
-          
-            
- 
-
         // загрузка номмера героя
        // NumberHero = S_LoadFromScene.LoadFromScene();
 
@@ -41,6 +37,7 @@ public class Game_Manager : MonoBehaviour
         S_Subscribes.StartSubscribes();
 
         //Старт спавна врагов
+        if(spawnEnemyBool)
         SpawnEnemy.StartSpawnerEnemy(Character);
 
         // Старт UI

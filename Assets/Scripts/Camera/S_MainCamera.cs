@@ -7,6 +7,8 @@ public class S_MainCamera : MonoBehaviour
     [SerializeField] private float dumping;
     [SerializeField] private Vector2 offset;
     private Transform Player;
+    [SerializeField] private bool freezeX;
+    [SerializeField] private int positionFreezeX;
 
     void LateUpdate()
     {
@@ -16,6 +18,9 @@ public class S_MainCamera : MonoBehaviour
 
             target = new Vector3(Player.position.x + offset.x, Player.position.y + offset.y, transform.position.z);
 
+            if (freezeX)
+                target = new Vector3(positionFreezeX,target.y,target.z);
+            
             Vector3 currentPosition = Vector3.Lerp(transform.position, target, dumping * Time.deltaTime);
             transform.position = currentPosition;
         }
